@@ -80,6 +80,7 @@
             <li><a href="">About</a></li>
             <li><a href="">Contact</a></li>
             <li><a href="">Faq</a></li>
+            <li><a href="/webproj/orders.php">Orders</a></li>
           </ul>
         </li>
         <!-- icons -->

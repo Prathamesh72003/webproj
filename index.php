@@ -18,7 +18,7 @@
   <link href='https://unpkg.com/boxicons@2.0.8/css/boxicons.min.css' rel='stylesheet'>
   <!-- Custom StyleSheet -->
   <link rel="stylesheet" href="./styles.css" />
-  <title>Nature Ecommerce Website</title>
+  <title>Niranjan</title>
 </head>
 
 <body>
@@ -42,7 +42,7 @@
               </h1>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ad natus facilis magni corporis alias.</p>
 
-              <a href="#">Shop Now</a>
+              <a href="">Shop Now</a>
             </div>
           </div>
 
@@ -99,7 +99,7 @@
         <img src="./images/Categories/skin.jpg" alt="" />
         <div class="promotion-content">
           <h3>Skin Care</h3>
-          <a href="">SHOP NOW</a>
+          <a href="./CollectionOnClick.php">SHOP NOW</a>
         </div>
       </div>
 
@@ -107,7 +107,7 @@
         <img src="./images/Categories/sun.jpg" alt="" />
         <div class="promotion-content">
           <h3>Sun Care</h3>
-          <a href="">SHOP NOW</a>
+          <a href="./CollectionOnClick.php">SHOP NOW</a>
         </div>
       </div>
 
@@ -115,14 +115,14 @@
         <img src="./images/Categories/hair.jpg" alt="" />
         <div class="promotion-content">
           <h3>Hair Care</h3>
-          <a href="">SHOP NOW</a>
+          <a href="./CollectionOnClick.php">SHOP NOW</a>
         </div>
       </div>
       <div class="promotion-item">
         <img src="./images/Categories/bodycare.jpeg" alt="" />
         <div class="promotion-content">
           <h3>Body Care</h3>
-          <a href="">SHOP NOW</a>
+          <a href="./CollectionOnClick.php">SHOP NOW</a>
         </div>
       </div>
 
@@ -130,7 +130,7 @@
         <img src="./images/Categories/jewel.jpg" alt="" />
         <div class="promotion-content">
           <h3>Decorative</h3>
-          <a href="">SHOP NOW</a>
+          <a href="./CollectionOnClick.php">SHOP NOW</a>
         </div>
       </div>
 
@@ -138,7 +138,7 @@
         <img src="./images/Categories/perfume.jpg" alt="" />
         <div class="promotion-content">
           <h3>Perfumes</h3>
-          <a href="">SHOP NOW</a>
+          <a href="./CollectionOnClick.php">SHOP NOW</a>
         </div>
       </div>
 
