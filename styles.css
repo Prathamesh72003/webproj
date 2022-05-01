@@ -1,6 +1,6 @@
 :root {
   --primary: #f7ac37;
-  --secondary: #FED1D2;
+  --secondary: #fed1d2;
   --white: #fff;
   --black: #222;
   --grey1: #3a3b3c;
@@ -80,7 +80,7 @@ nav {
   line-height: 8rem;
 }
 
-.nav-heart{
+.nav-heart {
   position: absolute;
   bottom: 2px;
   -webkit-text-stroke: 1.2px black;
@@ -101,48 +101,26 @@ nav .wrapper {
   height: 100%;
 }
 
-
 /* Search nav */
-.search-container {
-  float: right;
+.search-container form {
+  /* float: right; */
+  display: flex;
+  flex-direction: row;
+  border: solid 1px #ddd;
 }
 
-.SearchInput {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
+.searchInput {
+  margin: 10px;
   border: none;
-  border-radius: 10px;
+  outline: none;
+}
+.searchBtn {
   padding: 10px;
-}
-
-.search-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
   border: none;
-  cursor: pointer;
-}
- .search-container button:hover {
-  background: #ccc;
+  outline: none;
 }
 
 @media screen and (max-width: 600px) {
-  .search-container {
-    float: none;
-  }
-  .search-container button {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-  
 }
 
 /* search end */
@@ -729,7 +707,6 @@ nav .wrapper {
 
 .product {
   overflow: hidden;
-  
 }
 
 .product .img-container {
@@ -782,7 +759,6 @@ nav .wrapper {
 
 .product:hover .addCart {
   border-radius: 1rem 0 0 0;
-  
 }
 
 .product .addCart:hover {
@@ -908,7 +884,6 @@ nav .wrapper {
   color: black;
 }
 
-
 .advert-layout .content span {
   display: block;
   margin-bottom: 1rem;
@@ -943,7 +918,8 @@ nav .wrapper {
 .advert-layout .item:hover::after {
   background-color: var(--secondary);
   border-radius: 20px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .advert-layout .item:hover .content {
@@ -1327,18 +1303,16 @@ th:last-child {
   text-align: center;
 }
 
-.sortclass{
-  
+.sortclass {
 }
 
-.SortSubClass{
+.SortSubClass {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
-
 
 @media (max-width: 996px) {
   .col-3-of-4 .product-layout {

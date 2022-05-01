@@ -1,15 +1,15 @@
 <nav class="nav">
     <div class="wrapper container">
       <div class="logo"><a href="">
-        <img src="./images/logo.png" alt="">
+        <h3>Niranjan</h3>
       </a>
       </div>
 
 
     <div class="search-container">
         <form action="/action_page.php">
-            <input type="text" placeholder="Search.." name="search" class="SearchInput">
-            <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+            <input type="text" placeholder="Search.." name="search" class="searchInput">
+            <button type="submit" class="searchBtn"><i class="fa fa-search"></i></button>
         </form>
     </div>
 
