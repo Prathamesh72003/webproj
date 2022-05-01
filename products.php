@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="./images/favicon.png" type="image/png" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-  
+
 
   <!-- Custom StyleSheet -->
   <link rel="stylesheet" href="./styles.css" />
-  <title>Codevo - Ecommerce Website</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/png" />
+  <title>Niranjan</title>
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <?php
-    include "./components/nav.php";
+  <!-- Navigation -->
+  <?php
+  include "./components/nav.php";
   ?>
 
   <!-- PRODUCTS -->
@@ -27,7 +27,7 @@
   <section class="section products">
     <div class="products-layout container">
       <!-- <div class="col-1-of-4"> -->
-        <!-- <div>
+      <!-- <div>
           <div class="block-title">
             <h3>Category</h3>
           </div>
@@ -159,301 +159,217 @@
 
           <div class="product">
             <div class="img-container">
-              <img src="./images/product-1.jpg" alt="" />
+              <img src="./images/Featured/facewash.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
 
               <ul class="side-icons">
-                <span><i class="fas fa-search"></i></span>
                 <span><i class="far fa-heart"></i></span>
-                <span><i class="fas fa-sliders-h"></i></span>
               </ul>
             </div>
             <div class="bottom">
-              <a href="productDetails.php">Bambi Print Mini Backpack</a>
+              <a href="productDetails.php">Facewash</a>
               <div class="price">
-                <span>$150</span>
+                <span>₹.150</span>
               </div>
             </div>
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="./images/product-2.jpg" alt="" />
+              <img src="./images/Featured/lotion.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
 
               <ul class="side-icons">
-                <span><i class="fas fa-search"></i></span>
                 <span><i class="far fa-heart"></i></span>
-                <span><i class="fas fa-sliders-h"></i></span>
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Lotion</a>
               <div class="price">
-                <span>$150</span>
+                <span>₹.350</span>
               </div>
             </div>
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="./images/product-3.jpg" alt="" />
+              <img src="./images/Featured/serum.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
 
               <ul class="side-icons">
-                <span><i class="fas fa-search"></i></span>
                 <span><i class="far fa-heart"></i></span>
-                <span><i class="fas fa-sliders-h"></i></span>
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Face Serum</a>
               <div class="price">
-                <span>$150</span>
+                <span>₹. 500</span>
               </div>
             </div>
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="./images/product-4.jpg" alt="" />
+              <img src="./images/Featured/lipstick.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
 
               <ul class="side-icons">
-                <span><i class="fas fa-search"></i></span>
                 <span><i class="far fa-heart"></i></span>
-                <span><i class="fas fa-sliders-h"></i></span>
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Nykaa Lipstick</a>
               <div class="price">
-                <span>$150</span>
+                <span>₹.130</span>
               </div>
             </div>
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="./images/product-5.jpg" alt="" />
+              <img src="./images/Featured/facewash.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
 
               <ul class="side-icons">
-                <span><i class="fas fa-search"></i></span>
                 <span><i class="far fa-heart"></i></span>
-                <span><i class="fas fa-sliders-h"></i></span>
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="productDetails.php">Facewash</a>
               <div class="price">
-                <span>$150</span>
+                <span>₹.150</span>
               </div>
             </div>
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="./images/product-6.jpg" alt="" />
+              <img src="./images/Featured/lotion.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
 
               <ul class="side-icons">
-                <span><i class="fas fa-search"></i></span>
                 <span><i class="far fa-heart"></i></span>
-                <span><i class="fas fa-sliders-h"></i></span>
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Lotion</a>
               <div class="price">
-                <span>$150</span>
+                <span>₹.350</span>
               </div>
             </div>
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="./images/product-7.jpg" alt="" />
+              <img src="./images/Featured/serum.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
 
               <ul class="side-icons">
-                <span><i class="fas fa-search"></i></span>
                 <span><i class="far fa-heart"></i></span>
-                <span><i class="fas fa-sliders-h"></i></span>
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Face Serum</a>
               <div class="price">
-                <span>$150</span>
+                <span>₹. 500</span>
               </div>
             </div>
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="./images/product-8.jpg" alt="" />
+              <img src="./images/Featured/lipstick.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
 
               <ul class="side-icons">
-                <span><i class="fas fa-search"></i></span>
                 <span><i class="far fa-heart"></i></span>
-                <span><i class="fas fa-sliders-h"></i></span>
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Nykaa Lipstick</a>
               <div class="price">
-                <span>$150</span>
+                <span>₹.130</span>
               </div>
             </div>
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="./images/product-9.jpg" alt="" />
+              <img src="./images/Featured/facewash.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
 
               <ul class="side-icons">
-                <span><i class="fas fa-search"></i></span>
                 <span><i class="far fa-heart"></i></span>
-                <span><i class="fas fa-sliders-h"></i></span>
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="productDetails.php">Facewash</a>
               <div class="price">
-                <span>$150</span>
+                <span>₹.150</span>
               </div>
             </div>
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="./images/product-10.jpg" alt="" />
+              <img src="./images/Featured/lotion.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
 
               <ul class="side-icons">
-                <span><i class="fas fa-search"></i></span>
                 <span><i class="far fa-heart"></i></span>
-                <span><i class="fas fa-sliders-h"></i></span>
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Lotion</a>
               <div class="price">
-                <span>$150</span>
+                <span>₹.350</span>
               </div>
             </div>
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="./images/product-11.jpg" alt="" />
+              <img src="./images/Featured/serum.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
 
               <ul class="side-icons">
-                <span><i class="fas fa-search"></i></span>
                 <span><i class="far fa-heart"></i></span>
-                <span><i class="fas fa-sliders-h"></i></span>
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Face Serum</a>
               <div class="price">
-                <span>$150</span>
+                <span>₹. 500</span>
               </div>
             </div>
           </div>
           <div class="product">
             <div class="img-container">
-              <img src="./images/product-6.jpg" alt="" />
+              <img src="./images/Featured/lipstick.jpg" alt="" />
               <div class="addCart">
                 <i class="fas fa-shopping-cart"></i>
               </div>
 
               <ul class="side-icons">
-                <span><i class="fas fa-search"></i></span>
                 <span><i class="far fa-heart"></i></span>
-                <span><i class="fas fa-sliders-h"></i></span>
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
+              <a href="">Nykaa Lipstick</a>
               <div class="price">
-                <span>$150</span>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <div class="img-container">
-              <img src="./images/product-2.jpg" alt="" />
-              <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-
-              <ul class="side-icons">
-                <span><i class="fas fa-search"></i></span>
-                <span><i class="far fa-heart"></i></span>
-                <span><i class="fas fa-sliders-h"></i></span>
-              </ul>
-            </div>
-            <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
-              <div class="price">
-                <span>$150</span>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <div class="img-container">
-              <img src="./images/product-4.jpg" alt="" />
-              <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-
-              <ul class="side-icons">
-                <span><i class="fas fa-search"></i></span>
-                <span><i class="far fa-heart"></i></span>
-                <span><i class="fas fa-sliders-h"></i></span>
-              </ul>
-            </div>
-            <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
-              <div class="price">
-                <span>$150</span>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <div class="img-container">
-              <img src="./images/product-7.jpg" alt="" />
-              <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-
-              <ul class="side-icons">
-                <span><i class="fas fa-search"></i></span>
-                <span><i class="far fa-heart"></i></span>
-                <span><i class="fas fa-sliders-h"></i></span>
-              </ul>
-            </div>
-            <div class="bottom">
-              <a href="">Bambi Print Mini Backpack</a>
-              <div class="price">
-                <span>$150</span>
+                <span>₹.130</span>
               </div>
             </div>
           </div>
@@ -473,7 +389,7 @@
 
   <!-- Footer -->
   <?php
-    include "./components/footer.php";
+  include "./components/footer.php";
   ?>
   <!-- End Footer -->
 

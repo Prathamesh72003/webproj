@@ -102,8 +102,10 @@ nav .wrapper {
 }
 
 /* Search nav */
+.search-container {
+  margin-right: 20px;
+}
 .search-container form {
-  /* float: right; */
   display: flex;
   flex-direction: row;
   border: solid 1px #ddd;

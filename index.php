@@ -4,21 +4,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="./images/favicon.png" type="image/png" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
- <!-- ======== Swiper Js ======= -->
-    <link
+  <!-- ======== Swiper Js ======= -->
+  <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.5/swiper-bundle.min.css"
-    />
-
-  <!-- Boxicons -->
-  <link href='https://unpkg.com/boxicons@2.0.8/css/boxicons.min.css' rel='stylesheet'>
-  <!-- Custom StyleSheet -->
-  <link rel="stylesheet" href="./styles.css" />
-  <title>Niranjan</title>
+      />
+      
+      <!-- Boxicons -->
+      <link href='https://unpkg.com/boxicons@2.0.8/css/boxicons.min.css' rel='stylesheet'>
+      <!-- Custom StyleSheet -->
+      <link rel="stylesheet" href="./styles.css" />
+      <!-- Favicon -->
+      <link rel="shortcut icon" href="./images/favicon.png" type="image/png" />
+      <title>Niranjan</title>
 </head>
 
 <body>
@@ -354,7 +354,7 @@
         <div class="bottom">
           <a href="">Bambi Print Mini Backpack</a>
           <div class="price">
-            <span>$150</span>
+            <span>₹150</span>
           </div>
         </div>
       </div>
@@ -373,8 +373,8 @@
         <div class="bottom">
           <a href="">Bambi Print Mini Backpack</a>
           <div class="price">
-            <span>$150</span>
-            <span class="cancel">$160</span>
+            <span>₹150</span>
+            <span class="cancel">₹160</span>
           </div>
         </div>
       </div>
@@ -393,7 +393,7 @@
         <div class="bottom">
           <a href="">Bambi Print Mini Backpack</a>
           <div class="price">
-            <span>$150</span>
+            <span>₹150</span>
           </div>
         </div>
       </div>
@@ -412,8 +412,8 @@
         <div class="bottom">
           <a href="">Bambi Print Mini Backpack</a>
           <div class="price">
-            <span>$150</span>
-            <span class="cancel">$160</span>
+            <span>₹150</span>
+            <span class="cancel">₹160</span>
           </div>
         </div>
       </div>
@@ -432,7 +432,7 @@
         <div class="bottom">
           <a href="">Bambi Print Mini Backpack</a>
           <div class="price">
-            <span>$150</span>
+            <span>₹150</span>
           </div>
         </div>
       </div>
@@ -452,7 +452,7 @@
           <a href="">Bambi Print Mini Backpack</a>
 
           <div class="price">
-            <span>$150</span>
+            <span>₹150</span>
           </div>
         </div>
       </div>
@@ -472,8 +472,8 @@
           <a href="">Bambi Print Mini Backpack</a>
 
           <div class="price">
-            <span>$150</span>
-            <span class="cancel">$160</span>
+            <span>₹150</span>
+            <span class="cancel">₹160</span>
           </div>
         </div>
       </div>
@@ -492,8 +492,8 @@
         <div class="bottom">
           <a href="">Bambi Print Mini Backpack</a>
           <div class="price">
-            <span>$150</span>
-            <span class="cancel">$160</span>
+            <span>₹150</span>
+            <span class="cancel">₹160</span>
           </div>
         </div>
       </div>

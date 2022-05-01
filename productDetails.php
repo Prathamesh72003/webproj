@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="./images/favicon.png" type="image/png" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 
   <!-- Custom StyleSheet -->
   <link rel="stylesheet" href="./styles.css" />
-  <title>Codevo - Ecommerce Website</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/png" />
+  <title>Niranjan</title>
 </head>
 
 <body>
- 
-    <!-- Navigation -->
-    <?php
-      include "./components/nav.php";
-    ?>
+
+  <!-- Navigation -->
+  <?php
+  include "./components/nav.php";
+  ?>
 
   <!-- Product Details -->
   <section class="section product-detail">
@@ -46,7 +46,7 @@
       <div class="right">
         <span>Home/T-shirt</span>
         <h1>Bambi Print Mini Backpack</h1>
-        <div class="price">$50</div>
+        <div class="price">₹50</div>
         <form>
           <div>
             <select>
@@ -100,7 +100,7 @@
         <div class="bottom">
           <a href="">Bambi Print Mini Backpack</a>
           <div class="price">
-            <span>$150</span>
+            <span>₹150</span>
           </div>
         </div>
       </div>
@@ -120,7 +120,7 @@
         <div class="bottom">
           <a href="">Bambi Print Mini Backpack</a>
           <div class="price">
-            <span>$150</span>
+            <span>₹150</span>
           </div>
         </div>
       </div>
@@ -140,7 +140,7 @@
         <div class="bottom">
           <a href="">Bambi Print Mini Backpack</a>
           <div class="price">
-            <span>$150</span>
+            <span>₹150</span>
           </div>
         </div>
       </div>
@@ -160,7 +160,7 @@
         <div class="bottom">
           <a href="">Bambi Print Mini Backpack</a>
           <div class="price">
-            <span>$150</span>
+            <span>₹150</span>
           </div>
         </div>
       </div>
@@ -169,9 +169,9 @@
 
   <!-- Footer -->
   <?php
-  
-    include "./components/footer.php";
-  
+
+  include "./components/footer.php";
+
   ?>
   <!-- End Footer -->
 

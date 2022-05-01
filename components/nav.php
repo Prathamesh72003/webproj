@@ -1,17 +1,18 @@
 <nav class="nav">
-    <div class="wrapper container">
-      <div class="logo"><a href="">
+  <div class="wrapper container">
+    <div class="logo"><a href="">
         <h3>Niranjan</h3>
       </a>
-      </div>
-
-
-    <div class="search-container">
-        <form action="/action_page.php">
-            <input type="text" placeholder="Search.." name="search" class="searchInput">
-            <button type="submit" class="searchBtn"><i class="fa fa-search"></i></button>
-        </form>
     </div>
+
+
+    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center">
+      <div class="search-container">
+        <form action="">
+          <input type="text" placeholder="Search.." name="search" class="searchInput">
+          <button type="submit" class="searchBtn"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
 
 
       <ul class="nav-list">
@@ -25,7 +26,7 @@
           <label for="showMega" class="mobile-item">Categories <span><i class="fas fa-chevron-down"></i></span></label>
           <div class="mega-box">
             <div class="content">
-              
+
               <div class="row">
                 <header>Skin Care</header>
                 <ul class="mega-links">
@@ -66,11 +67,11 @@
           </div>
         </li>
         <li><a href="/webproj/products.php">Products</a></li>
-        
+
         <li><a href="/webproj/auth/Login">Login</a></li>
 
         <li><a href="/webproj/auth/SignUp/">Signup</a></li>
-        
+
 
         <li>
           <a href="" class="desktop-item">More <span><i class="fas fa-chevron-down"></i></span></a>
@@ -87,14 +88,15 @@
         <li class="icons">
           <a href="/webproj/cart.php">
             <span>
-            <img src="/webproj/images/shoppingBag.svg" alt="" />
-            <small class="count d-flex">0</small>
-          </span>
+              <img src="/webproj/images/shoppingBag.svg" alt="" />
+              <small class="count d-flex">0</small>
+            </span>
           </a>
           <span><i class="nav-heart far fa-heart"></i></span>
-          
+
         </li>
       </ul>
       <label for="" class="btn open-btn"><i class="fas fa-bars"></i></label>
     </div>
-  </nav>
+  </div>
+</nav>

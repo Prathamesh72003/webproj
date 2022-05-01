@@ -4,31 +4,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="./images/favicon.png" type="image/png" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-  
+
 
   <!-- Custom StyleSheet -->
   <link rel="stylesheet" href="./styles.css" />
-  <title>Codevo - Ecommerce Website</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/png" />
+  <title>Niranjan</title>
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <?php
-    include "./components/nav.php";
+  <!-- Navigation -->
+  <?php
+  include "./components/nav.php";
   ?>
 
   <!-- PRODUCTS -->
 
   <section class="section products">
     <div class="products-layout container">
-     
+
       <div class="col-3-of-4">
-        
+
 
         <div class="product-layout">
 
@@ -39,7 +39,7 @@
                 <i class="fas fa-shopping-cart"></i>
               </div> -->
 
-                <!-- <ul class="side-icons">
+              <!-- <ul class="side-icons">
                     <span><i class="fas fa-search"></i></span>
                     <span><i class="far fa-heart"></i></span>
                     <span><i class="fas fa-sliders-h"></i></span>
@@ -48,7 +48,7 @@
             <div class="bottom">
               <a href="productDetails.php">Park Avenue soap</a>
               <div class="price">
-                <span>₹150-₹350</span>
+                <span>₹150</span>
               </div>
             </div>
           </div>
@@ -59,7 +59,7 @@
                 <i class="fas fa-shopping-cart"></i>
               </div> -->
 
-                <!-- <ul class="side-icons">
+              <!-- <ul class="side-icons">
                     <span><i class="fas fa-search"></i></span>
                     <span><i class="far fa-heart"></i></span>
                     <span><i class="fas fa-sliders-h"></i></span>
@@ -68,7 +68,7 @@
             <div class="bottom">
               <a href="productDetails.php">Park Avenue soap</a>
               <div class="price">
-                <span>₹150-₹350</span>
+                <span>₹150</span>
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@
                 <i class="fas fa-shopping-cart"></i>
               </div> -->
 
-                <!-- <ul class="side-icons">
+              <!-- <ul class="side-icons">
                     <span><i class="fas fa-search"></i></span>
                     <span><i class="far fa-heart"></i></span>
                     <span><i class="fas fa-sliders-h"></i></span>
@@ -88,7 +88,7 @@
             <div class="bottom">
               <a href="productDetails.php">Park Avenue soap</a>
               <div class="price">
-                <span>₹150-₹350</span>
+                <span>₹150</span>
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@
                 <i class="fas fa-shopping-cart"></i>
               </div> -->
 
-                <!-- <ul class="side-icons">
+              <!-- <ul class="side-icons">
                     <span><i class="fas fa-search"></i></span>
                     <span><i class="far fa-heart"></i></span>
                     <span><i class="fas fa-sliders-h"></i></span>
@@ -108,7 +108,7 @@
             <div class="bottom">
               <a href="productDetails.php">Park Avenue soap</a>
               <div class="price">
-                <span>₹150-₹350</span>
+                <span>₹150</span>
               </div>
             </div>
           </div>
@@ -119,7 +119,7 @@
                 <i class="fas fa-shopping-cart"></i>
               </div> -->
 
-                <!-- <ul class="side-icons">
+              <!-- <ul class="side-icons">
                     <span><i class="fas fa-search"></i></span>
                     <span><i class="far fa-heart"></i></span>
                     <span><i class="fas fa-sliders-h"></i></span>
@@ -128,7 +128,7 @@
             <div class="bottom">
               <a href="productDetails.php">Park Avenue soap</a>
               <div class="price">
-                <span>₹150-₹350</span>
+                <span>₹150</span>
               </div>
             </div>
           </div>
@@ -139,7 +139,7 @@
                 <i class="fas fa-shopping-cart"></i>
               </div> -->
 
-                <!-- <ul class="side-icons">
+              <!-- <ul class="side-icons">
                     <span><i class="fas fa-search"></i></span>
                     <span><i class="far fa-heart"></i></span>
                     <span><i class="fas fa-sliders-h"></i></span>
@@ -148,7 +148,7 @@
             <div class="bottom">
               <a href="productDetails.php">Park Avenue soap</a>
               <div class="price">
-                <span>₹150-₹350</span>
+                <span>₹150</span>
               </div>
             </div>
           </div>
@@ -159,7 +159,7 @@
                 <i class="fas fa-shopping-cart"></i>
               </div> -->
 
-                <!-- <ul class="side-icons">
+              <!-- <ul class="side-icons">
                     <span><i class="fas fa-search"></i></span>
                     <span><i class="far fa-heart"></i></span>
                     <span><i class="fas fa-sliders-h"></i></span>
@@ -168,7 +168,7 @@
             <div class="bottom">
               <a href="productDetails.php">Park Avenue soap</a>
               <div class="price">
-                <span>₹150-₹350</span>
+                <span>₹150</span>
               </div>
             </div>
           </div>
@@ -179,7 +179,7 @@
                 <i class="fas fa-shopping-cart"></i>
               </div> -->
 
-                <!-- <ul class="side-icons">
+              <!-- <ul class="side-icons">
                     <span><i class="fas fa-search"></i></span>
                     <span><i class="far fa-heart"></i></span>
                     <span><i class="fas fa-sliders-h"></i></span>
@@ -188,7 +188,7 @@
             <div class="bottom">
               <a href="productDetails.php">Park Avenue soap</a>
               <div class="price">
-                <span>₹150-₹350</span>
+                <span>₹150</span>
               </div>
             </div>
           </div>
@@ -199,7 +199,7 @@
                 <i class="fas fa-shopping-cart"></i>
               </div> -->
 
-                <!-- <ul class="side-icons">
+              <!-- <ul class="side-icons">
                     <span><i class="fas fa-search"></i></span>
                     <span><i class="far fa-heart"></i></span>
                     <span><i class="fas fa-sliders-h"></i></span>
@@ -208,7 +208,7 @@
             <div class="bottom">
               <a href="productDetails.php">Park Avenue soap</a>
               <div class="price">
-                <span>₹150-₹350</span>
+                <span>₹150</span>
               </div>
             </div>
           </div>
@@ -219,7 +219,7 @@
                 <i class="fas fa-shopping-cart"></i>
               </div> -->
 
-                <!-- <ul class="side-icons">
+              <!-- <ul class="side-icons">
                     <span><i class="fas fa-search"></i></span>
                     <span><i class="far fa-heart"></i></span>
                     <span><i class="fas fa-sliders-h"></i></span>
@@ -228,12 +228,12 @@
             <div class="bottom">
               <a href="productDetails.php">Park Avenue soap</a>
               <div class="price">
-                <span>₹150-₹350</span>
+                <span>₹150</span>
               </div>
             </div>
           </div>
-          
-          
+
+
 
         </div>
 
@@ -250,7 +250,7 @@
 
   <!-- Footer -->
   <?php
-    include "./components/footer.php";
+  include "./components/footer.php";
   ?>
   <!-- End Footer -->
 
