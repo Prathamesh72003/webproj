@@ -33,12 +33,12 @@
       <div class="swiper-container slider-1">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="./images/hero-1.png" alt="" />
+            <img src="./images/hero_1.jpg" alt="" />
             <div class="content">
-              <h1>Super market vegbox
+              <h1>Super Make-Up fullbox
                 <br/>
-                start from 
-                <span>$9</span>
+                starting from 
+                <span>₹.1500</span>
               </h1>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ad natus facilis magni corporis alias.</p>
 
@@ -47,12 +47,12 @@
           </div>
 
           <div class="swiper-slide">
-            <img src="./images/hero-2.png" alt="hero image" />
+            <img src="./images/hero_2.jpg" alt="hero image" />
             <div class="content">
               <h1>You first Order
                 <br/>
-                <span>20% off</span>
-                at Juice
+                <span>30% off</span>
+                at Niranjan web store! 
               </h1>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ad natus facilis magni corporis alias.</p>
               <a href="#">Shop Now</a>
@@ -60,12 +60,12 @@
           </div>
           
           <div class="swiper-slide">
-            <img src="./images/hero-3.png" alt="hero image" />
+            <img src="./images/hero_3.jpg" alt="hero image" />
             <div class="content">
-              <h1>You first Order
+              <h1>All products
                 <br/>
-                <span>20% off</span>
-                at Juice
+                <span>100% Natural</span>
+                and turstable!
               </h1>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ad natus facilis magni corporis alias.</p>
               <a href="#">Shop Now</a>
@@ -90,58 +90,59 @@
 
   <section class="section promotion">
     <div class="title">
-      <h2>Shop Collections</h2>
+      <h2>Collections</h2>
       <span>Select from the premium product and save plenty money</span>
     </div>
 
     <div class="promotion-layout container">
       <div class="promotion-item">
-        <img src="./images/promo1.jpg" alt="" />
+        <img src="./images/Categories/skin.jpg" alt="" />
         <div class="promotion-content">
-          <h3>JUICE</h3>
+          <h3>Skin Care</h3>
           <a href="">SHOP NOW</a>
         </div>
       </div>
 
       <div class="promotion-item">
-        <img src="./images/promo2.jpg" alt="" />
+        <img src="./images/Categories/sun.jpg" alt="" />
         <div class="promotion-content">
-          <h3>MANGO</h3>
+          <h3>Sun Care</h3>
           <a href="">SHOP NOW</a>
         </div>
       </div>
 
       <div class="promotion-item">
-        <img src="./images/promo3.jpg" alt="" />
+        <img src="./images/Categories/hair.jpg" alt="" />
         <div class="promotion-content">
-          <h3>GRAPES</h3>
+          <h3>Hair Care</h3>
+          <a href="">SHOP NOW</a>
+        </div>
+      </div>
+      <div class="promotion-item">
+        <img src="./images/Categories/bodycare.jpeg" alt="" />
+        <div class="promotion-content">
+          <h3>Body Care</h3>
           <a href="">SHOP NOW</a>
         </div>
       </div>
 
       <div class="promotion-item">
-        <img src="./images/promo4.jpg" alt="" />
+        <img src="./images/Categories/jewel.jpg" alt="" />
         <div class="promotion-content">
-          <h3>POTATOE</h3>
+          <h3>Decorative</h3>
           <a href="">SHOP NOW</a>
         </div>
       </div>
 
       <div class="promotion-item">
-        <img src="./images/promo5.jpg" alt="" />
+        <img src="./images/Categories/perfume.jpg" alt="" />
         <div class="promotion-content">
-          <h3>ORANGE</h3>
+          <h3>Perfumes</h3>
           <a href="">SHOP NOW</a>
         </div>
       </div>
 
-      <div class="promotion-item">
-        <img src="./images/promo6.jpg" alt="" />
-        <div class="promotion-content">
-          <h3>PINEAPPLE</h3>
-          <a href="">SHOP NOW</a>
-        </div>
-      </div>
+    
     </div>
   </section>
 
@@ -158,7 +159,7 @@
           <div class="swiper-slide">
             <div class="product">
               <div class="img-container">
-                <img src="./images/product-1.jpg" alt="" />
+                <img src="./images/Featured/facewash.jpg" alt="" />
                 <div class="addCart">
                   <i class="fas fa-shopping-cart"></i>
                 </div>
@@ -168,9 +169,9 @@
                 </ul>
               </div>
               <div class="bottom">
-                <a href="productDetails.php">Bambi Print Mini Backpack</a>
+                <a href="productDetails.php">Facewash</a>
                 <div class="price">
-                  <span>$150</span>
+                  <span>₹.150</span>
                 </div>
               </div>
             </div>
@@ -178,7 +179,7 @@
           <div class="swiper-slide">
             <div class="product">
               <div class="img-container">
-                <img src="./images/product-8.jpg" alt="" />
+                <img src="./images/Featured/lotion.jpg" alt="" />
                 <div class="addCart">
                   <i class="fas fa-shopping-cart"></i>
                 </div>
@@ -188,9 +189,9 @@
                 </ul>
               </div>
               <div class="bottom">
-                <a href="">Bambi Print Mini Backpack</a>
+                <a href="">Lotion</a>
                 <div class="price">
-                  <span>$150</span>
+                  <span>₹.350</span>
                 </div>
               </div>
             </div>
@@ -198,7 +199,7 @@
           <div class="swiper-slide">
             <div class="product">
               <div class="img-container">
-                <img src="./images/product-10.jpg" alt="" />
+                <img src="./images/Featured/serum.jpg" alt="" />
                 <div class="addCart">
                   <i class="fas fa-shopping-cart"></i>
                 </div>
@@ -208,9 +209,9 @@
                 </ul>
               </div>
               <div class="bottom">
-                <a href="">Bambi Print Mini Backpack</a>
+                <a href="">Face Serum</a>
                 <div class="price">
-                  <span>$150</span>
+                  <span>₹. 500</span>
                 </div>
               </div>
             </div>
@@ -218,7 +219,7 @@
           <div class="swiper-slide">
             <div class="product">
               <div class="img-container">
-                <img src="./images/product-7.jpg" alt="" />
+                <img src="./images/Featured/lipstick.jpg" alt="" />
                 <div class="addCart">
                   <i class="fas fa-shopping-cart"></i>
                 </div>
@@ -228,9 +229,9 @@
                 </ul>
               </div>
               <div class="bottom">
-                <a href="">Bambi Print Mini Backpack</a>
+                <a href="">Nykaa Lipstick</a>
                 <div class="price">
-                  <span>$150</span>
+                  <span>₹.130</span>
                 </div>
               </div>
             </div>
@@ -238,7 +239,7 @@
           <div class="swiper-slide">
             <div class="product">
               <div class="img-container">
-                <img src="./images/product-6.jpg" alt="" />
+                <img src="./images/Featured/facewash.jpg" alt="" />
                 <div class="addCart">
                   <i class="fas fa-shopping-cart"></i>
                 </div>
@@ -248,9 +249,9 @@
                 </ul>
               </div>
               <div class="bottom">
-                <a href="">Bambi Print Mini Backpack</a>
+                <a href="productDetails.php">Facewash</a>
                 <div class="price">
-                  <span>$150</span>
+                  <span>₹.150</span>
                 </div>
               </div>
             </div>
@@ -258,7 +259,7 @@
           <div class="swiper-slide">
             <div class="product">
               <div class="img-container">
-                <img src="./images/product-5.jpg" alt="" />
+                <img src="./images/Featured/lotion.jpg" alt="" />
                 <div class="addCart">
                   <i class="fas fa-shopping-cart"></i>
                 </div>
@@ -268,9 +269,9 @@
                 </ul>
               </div>
               <div class="bottom">
-                <a href="">Bambi Print Mini Backpack</a>
+                <a href="">Lotion</a>
                 <div class="price">
-                  <span>$150</span>
+                  <span>₹.350</span>
                 </div>
               </div>
             </div>
@@ -278,7 +279,7 @@
           <div class="swiper-slide">
             <div class="product">
               <div class="img-container">
-                <img src="./images/product-1.jpg" alt="" />
+                <img src="./images/Featured/serum.jpg" alt="" />
                 <div class="addCart">
                   <i class="fas fa-shopping-cart"></i>
                 </div>
@@ -288,9 +289,9 @@
                 </ul>
               </div>
               <div class="bottom">
-                <a href="">Bambi Print Mini Backpack</a>
+                <a href="">Face Serum</a>
                 <div class="price">
-                  <span>$150</span>
+                  <span>₹. 500</span>
                 </div>
               </div>
             </div>
@@ -298,7 +299,7 @@
           <div class="swiper-slide">
             <div class="product">
               <div class="img-container">
-                <img src="./images/product-10.jpg" alt="" />
+                <img src="./images/Featured/lipstick.jpg" alt="" />
                 <div class="addCart">
                   <i class="fas fa-shopping-cart"></i>
                 </div>
@@ -308,13 +309,14 @@
                 </ul>
               </div>
               <div class="bottom">
-                <a href="">Bambi Print Mini Backpack</a>
+                <a href="">Nykaa Lipstick</a>
                 <div class="price">
-                  <span>$150</span>
+                  <span>₹.130</span>
                 </div>
               </div>
             </div>
           </div>
+          
         </div>
       </div>
     </div>
@@ -340,7 +342,7 @@
     <div class="product-layout">
       <div class="product">
         <div class="img-container">
-          <img src="./images/product-9.jpg" alt="" />
+          <img src="./images/New/new1.jpg" alt="" />
           <div class="addCart">
             <i class="fas fa-shopping-cart"></i>
           </div>
@@ -359,46 +361,7 @@
 
       <div class="product">
         <div class="img-container">
-          <img src="./images/product-1.jpg" alt="" />
-          <div class="addCart">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
-
-          <ul class="side-icons">
-            <span><i class="far fa-heart"></i></span>
-          </ul>
-        </div>
-        <div class="bottom">
-          <a href="">Bambi Print Mini Backpack</a>
-          <div class="price">
-            <span>$150</span>
-            <span class="cancel">$160</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="product">
-        <div class="img-container">
-          <img src="./images/product-2.jpg" alt="" />
-          <div class="addCart">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
-
-          <ul class="side-icons">
-            <span><i class="far fa-heart"></i></span>
-          </ul>
-        </div>
-        <div class="bottom">
-          <a href="">Bambi Print Mini Backpack</a>
-          <div class="price">
-            <span>$150</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="product">
-        <div class="img-container">
-          <img src="./images/product-4.jpg" alt="" />
+          <img src="./images/New/new7.jpg" alt="" />
           <div class="addCart">
             <i class="fas fa-shopping-cart"></i>
           </div>
@@ -418,7 +381,7 @@
 
       <div class="product">
         <div class="img-container">
-          <img src="./images/product-5.jpg" alt="" />
+          <img src="./images/New/new8.jpg" alt="" />
           <div class="addCart">
             <i class="fas fa-shopping-cart"></i>
           </div>
@@ -437,7 +400,46 @@
 
       <div class="product">
         <div class="img-container">
-          <img src="./images/product-6.jpg" alt="" />
+          <img src="./images/New/new4.jpg" alt="" />
+          <div class="addCart">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+
+          <ul class="side-icons">
+            <span><i class="far fa-heart"></i></span>
+          </ul>
+        </div>
+        <div class="bottom">
+          <a href="">Bambi Print Mini Backpack</a>
+          <div class="price">
+            <span>$150</span>
+            <span class="cancel">$160</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="img-container">
+          <img src="./images/New/new5.jpg" alt="" />
+          <div class="addCart">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+
+          <ul class="side-icons">
+            <span><i class="far fa-heart"></i></span>
+          </ul>
+        </div>
+        <div class="bottom">
+          <a href="">Bambi Print Mini Backpack</a>
+          <div class="price">
+            <span>$150</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="img-container">
+          <img src="./images/New/new6.jpg" alt="" />
           <div class="addCart">
             <i class="fas fa-shopping-cart"></i>
           </div>
@@ -457,7 +459,7 @@
 
       <div class="product">
         <div class="img-container">
-          <img src="./images/product-7.jpg" alt="" />
+          <img src="./images/New/new2.jpg" alt="" />
           <div class="addCart">
             <i class="fas fa-shopping-cart"></i>
           </div>
@@ -478,7 +480,7 @@
 
       <div class="product">
         <div class="img-container">
-          <img src="./images/product-8.jpg" alt="" />
+          <img src="./images/New/new3.jpg" alt="" />
           <div class="addCart">
             <i class="fas fa-shopping-cart"></i>
           </div>
@@ -510,7 +512,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="./images/kit.png" alt="">
+        <img src="./images/New/new6.jpg" alt="">
         <div class="content">
           <span>New Trending</span>
           <h3>Designer Bags</h3>

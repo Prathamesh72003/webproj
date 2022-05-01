@@ -18,18 +18,16 @@
         <div class="top">
           <label for="" class="btn close-btn"><i class="fas fa-times"></i></label>
         </div>
-        <li><a href="index.php">Home</a></li>
+        <li><a href="/webproj/index.php">Home</a></li>
         <li>
           <a href="" class="desktop-item">Categories <span><i class="fas fa-chevron-down"></i></span></a>
           <input type="checkbox" id="showMega" />
           <label for="showMega" class="mobile-item">Categories <span><i class="fas fa-chevron-down"></i></span></label>
           <div class="mega-box">
             <div class="content">
+              
               <div class="row">
-                <img src="./images/nav.png" alt="" />
-              </div>
-              <div class="row">
-                <header>Shop Layout</header>
+                <header>Skin Care</header>
                 <ul class="mega-links">
                   <li><a href="#">Shop With Background</a></li>
                   <li><a href="#">Shop Mini Categories</a></li>
@@ -38,7 +36,16 @@
                 </ul>
               </div>
               <div class="row">
-                <header>Filter Layout</header>
+                <header>Hair Care</header>
+                <ul class="mega-links">
+                  <li><a href="#">Shop With Background</a></li>
+                  <li><a href="#">Shop Mini Categories</a></li>
+                  <li><a href="#">Shop Only Categories</a></li>
+                  <li><a href="#">Shop Icon Categories</a></li>
+                </ul>
+              </div>
+              <div class="row">
+                <header>Body Care</header>
                 <ul class="mega-links">
                   <li><a href="#">Sidebar</a></li>
                   <li><a href="#">Filter Default</a></li>
@@ -47,7 +54,7 @@
                 </ul>
               </div>
               <div class="row">
-                <header>Product Layout</header>
+                <header>Sun Care</header>
                 <ul class="mega-links">
                   <li><a href="#">Layout Zoom</a></li>
                   <li><a href="#">Layout Sticky</a></li>
@@ -58,9 +65,11 @@
             </div>
           </div>
         </li>
-        <li><a href="products.php">Products</a></li>
+        <li><a href="/webproj/products.php">Products</a></li>
         
-        <li><a href="">Login / Signup</a></li>
+        <li><a href="/webproj/auth/Login">Login</a></li>
+
+        <li><a href="/webproj/auth/SignUp/">Signup</a></li>
         
 
         <li>
@@ -75,9 +84,9 @@
         </li>
         <!-- icons -->
         <li class="icons">
-          <a href="cart.php">
+          <a href="/webproj/cart.php">
             <span>
-            <img src="./images/shoppingBag.svg" alt="" />
+            <img src="/webproj/images/shoppingBag.svg" alt="" />
             <small class="count d-flex">0</small>
           </span>
           </a>
