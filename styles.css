@@ -79,7 +79,10 @@ nav {
   height: 8rem;
   line-height: 8rem;
 }
-
+.nav .logo {
+  font-size: 20px;
+  font-weight: 600;
+}
 .nav-heart {
   position: absolute;
   bottom: 2px;
@@ -123,13 +126,23 @@ nav .wrapper {
 }
 
 @media screen and (max-width: 600px) {
+  .nav .logo {
+    font-size: 0px;
+    background: url("/webproj/images/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /* search end */
 
-.wrapper .logo {
+/* .wrapper .logo {
   height: 100%;
-}
+} */
 
 .wrapper .logo a {
   display: flex;
@@ -585,6 +598,7 @@ nav .wrapper {
 
 .section .title {
   text-align: center;
+  margin: 0 30px;
   margin-bottom: 5rem;
 }
 
@@ -613,7 +627,7 @@ nav .wrapper {
 .promotion-item img {
   object-fit: cover;
   height: 350px;
-  width: 350px;
+  width: 100%;
   transition: all 500ms ease-in-out;
 }
 
@@ -703,7 +717,6 @@ nav .wrapper {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 3rem;
   max-width: 130rem;
-  margin: 0 auto;
   padding: 0 1.6rem;
 }
 
@@ -719,7 +732,7 @@ nav .wrapper {
 .product .img-container img {
   object-fit: cover;
   height: 280px;
-  width: 280px;
+  width: 100%;
 }
 
 .product .bottom {
@@ -835,6 +848,9 @@ nav .wrapper {
   .prodouct-layout {
     grid-template-columns: repeat(3, 1fr);
   }
+  .prodouct-layout {
+    margin: 0 30px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -860,6 +876,7 @@ nav .wrapper {
   position: relative;
   /* display: inline-block; */
   display: flex;
+  margin: 20px;
   flex-direction: row;
   z-index: 0;
   width: 100%;
@@ -918,18 +935,17 @@ nav .wrapper {
 }
 
 .advert-layout .item:hover::after {
-  background-color: var(--secondary);
   border-radius: 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .advert-layout .item:hover .content {
-  color: var(--white);
+  color: var(--black);
 }
 
 .advert-layout .item:hover .content a {
-  color: var(--white);
+  color: var(--black);
 }
 
 .advert-layout .item:hover img {

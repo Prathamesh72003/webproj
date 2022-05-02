@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="./images/favicon.png" type="image/png" />
+	<link rel="shortcut icon" href="/webproj/images/logo.png" type="image/png" />
 	<title>Niranjan</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -44,7 +44,7 @@
 				<div class="form-wrapper">
 					<div class="form-group">
 						<label for="">Password</label>
-						<a href="/webproj/auth/SignUp/" style="text-decoration:underline">Forgot?</a>
+						<a href="//auth/SignUp/" style="text-decoration:underline">Forgot?</a>
 					</div>
 					<input type="password" class="form-control">
 				</div>
@@ -56,7 +56,7 @@
 						</label>
 					</div> -->
 				<button class="login-btn">Login</button>
-				<h4 style="text-align:center; padding:10px;">New to Niranjan?<a href="/webproj/auth/SignUp/" style="text-decoration:underline"> Create account</a></h4>
+				<h4 style="text-align:center; padding:10px;">New to Niranjan?<a href="/auth/SignUp/" style="text-decoration:underline"> Create account</a></h4>
 			</form>
 		</div>
 	</div>

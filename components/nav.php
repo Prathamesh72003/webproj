@@ -1,15 +1,14 @@
 <nav class="nav">
   <div class="wrapper container">
-    <div class="logo"><a href="">
-        <h3>Niranjan</h3>
-      </a>
+    <div class="logo">
+      Niranjan
     </div>
 
 
     <div style="display: flex; flex-direction: row; justify-content: center; align-items: center">
       <div class="search-container">
-        <form action="">
-          <input type="text" placeholder="Search.." name="search" class="searchInput">
+        <form action="/webproj/Search.php">
+          <input type="text" placeholder="Search.." name="search" class="searchInput" autocomplete="off" />
           <button type="submit" class="searchBtn"><i class="fa fa-search"></i></button>
         </form>
       </div>

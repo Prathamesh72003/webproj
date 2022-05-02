@@ -11,7 +11,7 @@
   <!-- Custom StyleSheet -->
   <link rel="stylesheet" href="./styles.css" />
   <!-- Favicon -->
-  <link rel="shortcut icon" href="./images/favicon.png" type="image/png" />
+  <link rel="shortcut icon" href="/webproj/images/logo.png" type="image/png" />
   <title>Niranjan</title>
 </head>
 

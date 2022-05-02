@@ -7,25 +7,22 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   <!-- ======== Swiper Js ======= -->
-  <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.5/swiper-bundle.min.css"
-      />
-      
-      <!-- Boxicons -->
-      <link href='https://unpkg.com/boxicons@2.0.8/css/boxicons.min.css' rel='stylesheet'>
-      <!-- Custom StyleSheet -->
-      <link rel="stylesheet" href="./styles.css" />
-      <!-- Favicon -->
-      <link rel="shortcut icon" href="./images/favicon.png" type="image/png" />
-      <title>Niranjan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.5/swiper-bundle.min.css" />
+
+  <!-- Boxicons -->
+  <link href='https://unpkg.com/boxicons@2.0.8/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Custom StyleSheet -->
+  <link rel="stylesheet" href="./styles.css" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/webproj/images/logo.png" type="image/png" />
+  <title>Niranjan</title>
 </head>
 
 <body>
 
   <!-- Navigation -->
   <?php
-    include "./components/nav.php";
+  include "./components/nav.php";
   ?>
 
   <div class="hero">
@@ -36,8 +33,8 @@
             <img src="./images/hero_1.jpg" alt="" />
             <div class="content">
               <h1>Super Make-Up fullbox
-                <br/>
-                starting from 
+                <br />
+                starting from
                 <span>₹.1500</span>
               </h1>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ad natus facilis magni corporis alias.</p>
@@ -50,20 +47,20 @@
             <img src="./images/hero_2.jpg" alt="hero image" />
             <div class="content">
               <h1>You first Order
-                <br/>
+                <br />
                 <span>30% off</span>
-                at Niranjan web store! 
+                at Niranjan web store!
               </h1>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ad natus facilis magni corporis alias.</p>
               <a href="#">Shop Now</a>
             </div>
           </div>
-          
+
           <div class="swiper-slide">
             <img src="./images/hero_3.jpg" alt="hero image" />
             <div class="content">
               <h1>All products
-                <br/>
+                <br />
                 <span>100% Natural</span>
                 and turstable!
               </h1>
@@ -77,12 +74,12 @@
 
     <!-- Carousel Navigation -->
     <div class="arrows d-flex">
-        <div class="swiper-prev d-flex">
-          <i class="bx bx-chevrons-left swiper-icon"></i>
-        </div>
-        <div class="swiper-next d-flex">
-          <i class="bx bx-chevrons-right swiper-icon"></i>
-        </div>
+      <div class="swiper-prev d-flex">
+        <i class="bx bx-chevrons-left swiper-icon"></i>
+      </div>
+      <div class="swiper-next d-flex">
+        <i class="bx bx-chevrons-right swiper-icon"></i>
+      </div>
     </div>
   </div>
 
@@ -142,7 +139,7 @@
         </div>
       </div>
 
-    
+
     </div>
   </section>
 
@@ -316,19 +313,19 @@
               </div>
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>
 
-     <!-- Carousel Navigation -->
+    <!-- Carousel Navigation -->
     <div class="arrows d-flex">
-       <div class="custom-next d-flex">
-          <i class="bx bx-chevrons-right swiper-icon"></i>
-        </div>
-        <div class="custom-prev d-flex">
-          <i class="bx bx-chevrons-left swiper-icon"></i>
-        </div>
+      <div class="custom-next d-flex">
+        <i class="bx bx-chevrons-right swiper-icon"></i>
+      </div>
+      <div class="custom-prev d-flex">
+        <i class="bx bx-chevrons-left swiper-icon"></i>
+      </div>
     </div>
   </section>
 
@@ -339,8 +336,8 @@
       <span>Select from the premium product brands and save plenty money</span>
     </div>
 
-    <div class="product-layout">
-      <div class="product">
+    <div class="product-layout" style="margin: 0 auto;">
+      <div class=" product">
         <div class="img-container">
           <img src="./images/New/new1.jpg" alt="" />
           <div class="addCart">
@@ -501,7 +498,7 @@
   </section>
 
   <!-- ADVERT -->
-  <section class="section advert">
+  <!-- <section class="section advert">
     <div class="advert-layout container">
       <div class="item ">
         <img src="./images/kit.png" alt="">
@@ -520,7 +517,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- BRANDS -->
   <section class="section brands">
@@ -553,7 +550,7 @@
           <div class="swiper-slide">
             <img src="./images/brand7.png" alt="">
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -561,9 +558,9 @@
 
   <!-- Footer -->
   <?php
-  
-    include "./components/footer.php";
-  
+
+  include "./components/footer.php";
+
   ?>
   <!-- End Footer -->
 
@@ -575,4 +572,3 @@
 </body>
 
 </html>
-
