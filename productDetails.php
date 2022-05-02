@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <!-- ======== Swiper Js ======= -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.5/swiper-bundle.min.css" />
+
+  <!-- Boxicons -->
+  <link href='https://unpkg.com/boxicons@2.0.8/css/boxicons.min.css' rel='stylesheet'>
 
   <!-- Custom StyleSheet -->
   <link rel="stylesheet" href="./styles.css" />
@@ -25,10 +30,27 @@
   <section class="section product-detail">
     <div class="details container">
       <div class="left">
-        <div class="main">
-          <img src="./images/product-1.jpg" alt="" />
+        <div class="main row">
+          <div class="swiper-container slider-4">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/product-1.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/product-2.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/product-3.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/product-1.jpg" alt="" />
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
         </div>
-        <div class="thumbnails">
+        <!-- <div class="thumbnails">
           <div class="thumbnail">
             <img src="./images/product-2.jpg" alt="" />
           </div>
@@ -41,13 +63,25 @@
           <div class="thumbnail">
             <img src="./images/product-5.jpg" alt="" />
           </div>
-        </div>
+        </div> -->
+        <!-- Carousel Navigation -->
+        <!-- <div class="arrows d-flex">
+          <div class="swiper-prev d-flex">
+            <i class="bx bx-chevrons-left swiper-icon"></i>
+          </div>
+          <div class="swiper-next d-flex">
+            <i class="bx bx-chevrons-right swiper-icon"></i>
+          </div>
+        </div> -->
       </div>
       <div class="right">
-        <span>Home/T-shirt</span>
-        <h1>Bambi Print Mini Backpack</h1>
-        <div class="price">₹50</div>
-        <form>
+        <span>Hair care</span>
+        <h1>Shampoo</h1>
+        <div style="display: flex; flex-direction:row">
+          <div class="price">₹50</div>
+          <div class="prevPrice">₹50</div>
+        </div>
+        <!-- <form>
           <div>
             <select>
               <option value="Select Quantity" selected disabled>
@@ -60,10 +94,10 @@
             </select>
             <span><i class="fas fa-chevron-down"></i></span>
           </div>
-        </form>
+        </form> -->
 
         <form class="form">
-          <input type="text" placeholder="1" />
+          <input type="number" placeholder="1" />
           <a href="cart.php" class="addCart">Add To Cart</a>
         </form>
         <h3>Product Detail</h3>
@@ -177,6 +211,23 @@
 
   <!-- Custom Scripts -->
   <script src="./js/index.js"></script>
+  <script type="text/javascript">
+    window.addEventListener('load', (event) => {
+      const swiper4 = new Swiper(".slider-4", {
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        grabCursor: true,
+        effect: "fade",
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-next",
+          prevEl: ".swiper-prev",
+        },
+      });
+    })
+  </script>
 </body>
 
 </html>

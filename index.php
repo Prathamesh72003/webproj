@@ -30,8 +30,8 @@
       <div class="swiper-container slider-1">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="./images/hero_1.jpg" alt="" />
-            <div class="content">
+            <img src="./images/banner_1.png" alt="" />
+            <!-- <div class="content">
               <h1>Super Make-Up fullbox
                 <br />
                 starting from
@@ -40,12 +40,12 @@
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ad natus facilis magni corporis alias.</p>
 
               <a href="">Shop Now</a>
-            </div>
+            </div> -->
           </div>
 
           <div class="swiper-slide">
-            <img src="./images/hero_2.jpg" alt="hero image" />
-            <div class="content">
+            <img src="./images/banner_2.png" alt="hero image" />
+            <!-- <div class="content">
               <h1>You first Order
                 <br />
                 <span>30% off</span>
@@ -53,21 +53,9 @@
               </h1>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ad natus facilis magni corporis alias.</p>
               <a href="#">Shop Now</a>
-            </div>
+            </div> -->
           </div>
 
-          <div class="swiper-slide">
-            <img src="./images/hero_3.jpg" alt="hero image" />
-            <div class="content">
-              <h1>All products
-                <br />
-                <span>100% Natural</span>
-                and turstable!
-              </h1>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ad natus facilis magni corporis alias.</p>
-              <a href="#">Shop Now</a>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -87,7 +75,7 @@
 
   <section class="section promotion">
     <div class="title">
-      <h2>Collections</h2>
+      <h2>Categories</h2>
       <span>Select from the premium product and save plenty money</span>
     </div>
 

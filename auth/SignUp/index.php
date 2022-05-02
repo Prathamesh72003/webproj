@@ -78,8 +78,8 @@
             console.log("fired");
             div.classList.add("snackbar");
 
-            div.id = "emailToast"
-            div.innerHTML = "Verification link has been send to your Email address"
+            div.id = "emailToast";
+            div.innerHTML = "Verification link has been send to your Email address";
             document.body.appendChild(div);
 
             var x = document.getElementById("emailToast");
