@@ -22,6 +22,9 @@
 	<link rel="stylesheet" href="../../styles.css">
 	<!-- STYLE CSS -->
 	<link rel="stylesheet" href="css/style.css">
+
+	<!-- snackbar -->
+	<link rel="stylesheet" href="../../css/snackbar.css">
 </head>
 
 <body>
@@ -34,33 +37,53 @@
 
 	<div class="authwrapper" style="background-image: url('images/bg-registration-form-2.jpg');">
 		<div class="inner">
-			<form action="">
+			<form action="" onsubmit="signin(event)">
 				<h3>Login Form</h3>
 
 				<div class="form-wrapper">
 					<label for="">Email</label>
-					<input type="email" class="form-control">
+					<input type="email" id="email" value="shindesiddhesh13062003@gmail.com" class="form-control" required>
 				</div>
 				<div class="form-wrapper">
 					<div class="form-group">
 						<label for="">Password</label>
-						<a href="//auth/SignUp/" style="text-decoration:underline">Forgot?</a>
+						<!-- <a href="//auth/SignUp/" style="text-decoration:underline">Forgot?</a> -->
 					</div>
-					<input type="password" class="form-control">
+					<input type="password" id="password" value="siddhesh" class="form-control" required>
 				</div>
 
 				<!-- <div class="checkbox">
-						<label>
-							<input type="checkbox"> .
-							<span class="checkmark"></span>
-						</label>
-					</div> -->
+                        <label>
+                            <input type="checkbox"> .
+                            <span class="checkmark"></span>
+                        </label>
+                    </div> -->
 				<button class="login-btn">Login</button>
 				<h4 style="text-align:center; padding:10px;">New to Niranjan?<a href="/auth/SignUp/" style="text-decoration:underline"> Create account</a></h4>
 			</form>
 		</div>
 	</div>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+	<script>
+		// Your web app's Firebase configuration
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		const firebaseConfig = {
+			apiKey: "AIzaSyAKAyCEpD1kK0PXLh8vyi-Rjqqu4pnCuC8",
+			authDomain: "niranjan-ed345.firebaseapp.com",
+			projectId: "niranjan-ed345",
+			storageBucket: "niranjan-ed345.appspot.com",
+			messagingSenderId: "736749189078",
+			appId: "1:736749189078:web:9ad94a2f5ca34039689677",
+			measurementId: "G-3W4168D1LB"
+		};
+
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig)
+	</script>
+	<script src="./main.js"></script>
+</body>
 
 </html>

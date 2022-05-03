@@ -50,29 +50,6 @@
             <div class="swiper-button-next"></div>
           </div>
         </div>
-        <!-- <div class="thumbnails">
-          <div class="thumbnail">
-            <img src="./images/product-2.jpg" alt="" />
-          </div>
-          <div class="thumbnail">
-            <img src="./images/product-3.jpg" alt="" />
-          </div>
-          <div class="thumbnail">
-            <img src="./images/product-4.jpg" alt="" />
-          </div>
-          <div class="thumbnail">
-            <img src="./images/product-5.jpg" alt="" />
-          </div>
-        </div> -->
-        <!-- Carousel Navigation -->
-        <!-- <div class="arrows d-flex">
-          <div class="swiper-prev d-flex">
-            <i class="bx bx-chevrons-left swiper-icon"></i>
-          </div>
-          <div class="swiper-next d-flex">
-            <i class="bx bx-chevrons-right swiper-icon"></i>
-          </div>
-        </div> -->
       </div>
       <div class="right">
         <span>Hair care</span>
@@ -97,7 +74,7 @@
         </form> -->
 
         <form class="form">
-          <input type="number" placeholder="1" />
+          <input type="number" placeholder="1" style="width: 60px" />
           <a href="cart.php" class="addCart">Add To Cart</a>
         </form>
         <h3>Product Detail</h3>
@@ -127,7 +104,7 @@
 
           <ul class="side-icons">
             <span><i class="fas fa-search"></i></span>
-            <span><i class="far fa-heart"></i></span>
+            <span><i class="fas fa-share"></i></span>
             <span><i class="fas fa-sliders-h"></i></span>
           </ul>
         </div>
@@ -147,7 +124,7 @@
 
           <ul class="side-icons">
             <span><i class="fas fa-search"></i></span>
-            <span><i class="far fa-heart"></i></span>
+            <span><i class="fas fa-share"></i></span>
             <span><i class="fas fa-sliders-h"></i></span>
           </ul>
         </div>
@@ -167,7 +144,7 @@
 
           <ul class="side-icons">
             <span><i class="fas fa-search"></i></span>
-            <span><i class="far fa-heart"></i></span>
+            <span><i class="fas fa-share"></i></span>
             <span><i class="fas fa-sliders-h"></i></span>
           </ul>
         </div>
@@ -187,7 +164,7 @@
 
           <ul class="side-icons">
             <span><i class="fas fa-search"></i></span>
-            <span><i class="far fa-heart"></i></span>
+            <span><i class="fas fa-share"></i></span>
             <span><i class="fas fa-sliders-h"></i></span>
           </ul>
         </div>
@@ -212,21 +189,19 @@
   <!-- Custom Scripts -->
   <script src="./js/index.js"></script>
   <script type="text/javascript">
-    window.addEventListener('load', (event) => {
-      const swiper4 = new Swiper(".slider-4", {
-        autoplay: {
-          delay: 3500,
-          disableOnInteraction: false,
-        },
-        grabCursor: true,
-        effect: "fade",
-        loop: true,
-        navigation: {
-          nextEl: ".swiper-next",
-          prevEl: ".swiper-prev",
-        },
-      });
-    })
+    const swiper4 = new Swiper(".slider-4", {
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      grabCursor: true,
+      effect: "fade",
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-next",
+        prevEl: ".swiper-prev",
+      },
+    });
   </script>
 </body>
 

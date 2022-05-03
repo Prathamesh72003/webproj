@@ -150,7 +150,7 @@
                 </div>
 
                 <ul class="side-icons">
-                  <span><i class="far fa-heart"></i></span>
+                  <span><i class="fas fa-share"></i></span>
                 </ul>
               </div>
               <div class="bottom">
@@ -170,7 +170,7 @@
                 </div>
 
                 <ul class="side-icons">
-                  <span><i class="far fa-heart"></i></span>
+                  <span><i class="fas fa-share"></i></span>
                 </ul>
               </div>
               <div class="bottom">
@@ -190,7 +190,7 @@
                 </div>
 
                 <ul class="side-icons">
-                  <span><i class="far fa-heart"></i></span>
+                  <span><i class="fas fa-share"></i></span>
                 </ul>
               </div>
               <div class="bottom">
@@ -210,7 +210,7 @@
                 </div>
 
                 <ul class="side-icons">
-                  <span><i class="far fa-heart"></i></span>
+                  <span><i class="fas fa-share"></i></span>
                 </ul>
               </div>
               <div class="bottom">
@@ -230,7 +230,7 @@
                 </div>
 
                 <ul class="side-icons">
-                  <span><i class="far fa-heart"></i></span>
+                  <span><i class="fas fa-share"></i></span>
                 </ul>
               </div>
               <div class="bottom">
@@ -250,7 +250,7 @@
                 </div>
 
                 <ul class="side-icons">
-                  <span><i class="far fa-heart"></i></span>
+                  <span><i class="fas fa-share"></i></span>
                 </ul>
               </div>
               <div class="bottom">
@@ -270,7 +270,7 @@
                 </div>
 
                 <ul class="side-icons">
-                  <span><i class="far fa-heart"></i></span>
+                  <span><i class="fas fa-share"></i></span>
                 </ul>
               </div>
               <div class="bottom">
@@ -290,7 +290,7 @@
                 </div>
 
                 <ul class="side-icons">
-                  <span><i class="far fa-heart"></i></span>
+                  <span><i class="fas fa-share"></i></span>
                 </ul>
               </div>
               <div class="bottom">
@@ -333,7 +333,7 @@
           </div>
 
           <ul class="side-icons">
-            <span><i class="far fa-heart"></i></span>
+            <span><i class="fas fa-share"></i></span>
           </ul>
         </div>
         <div class="bottom">
@@ -352,7 +352,7 @@
           </div>
 
           <ul class="side-icons">
-            <span><i class="far fa-heart"></i></span>
+            <span><i class="fas fa-share"></i></span>
           </ul>
         </div>
         <div class="bottom">
@@ -372,7 +372,7 @@
           </div>
 
           <ul class="side-icons">
-            <span><i class="far fa-heart"></i></span>
+            <span><i class="fas fa-share"></i></span>
           </ul>
         </div>
         <div class="bottom">
@@ -391,7 +391,7 @@
           </div>
 
           <ul class="side-icons">
-            <span><i class="far fa-heart"></i></span>
+            <span><i class="fas fa-share"></i></span>
           </ul>
         </div>
         <div class="bottom">
@@ -411,7 +411,7 @@
           </div>
 
           <ul class="side-icons">
-            <span><i class="far fa-heart"></i></span>
+            <span><i class="fas fa-share"></i></span>
           </ul>
         </div>
         <div class="bottom">
@@ -430,7 +430,7 @@
           </div>
 
           <ul class="side-icons">
-            <span><i class="far fa-heart"></i></span>
+            <span><i class="fas fa-share"></i></span>
           </ul>
         </div>
         <div class="bottom">
@@ -450,7 +450,7 @@
           </div>
 
           <ul class="side-icons">
-            <span><i class="far fa-heart"></i></span>
+            <span><i class="fas fa-share"></i></span>
           </ul>
         </div>
         <div class="bottom">
@@ -471,7 +471,7 @@
           </div>
 
           <ul class="side-icons">
-            <span><i class="far fa-heart"></i></span>
+            <span><i class="fas fa-share"></i></span>
           </ul>
         </div>
         <div class="bottom">

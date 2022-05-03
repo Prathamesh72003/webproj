@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="../../css/snackbar.css">
     <!-- STYLE CSS -->
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -37,29 +38,29 @@
 
     <div class="authwrapper" style="background-image: url('images/bg-registration-form-2.jpg');">
         <div class="inner">
-            <form action="" onsubmit="return false;">
+            <form action="" onsubmit="signupFun(event)">
                 <h3>Signup Form</h3>
                 <div class="form-group">
                     <div class="form-wrapper">
                         <label for="">First Name</label>
-                        <input type="text" class="form-control">
+                        <input id="firstName" value="fname" type="text" class="form-control" required>
                     </div>
                     <div class="form-wrapper">
                         <label for="">Last Name</label>
-                        <input type="text" class="form-control">
+                        <input id="lastName" value="lname" type="text" class="form-control" required>
                     </div>
                 </div>
                 <div class="form-wrapper">
                     <label for="">Email</label>
-                    <input type="text" class="form-control">
+                    <input id="email" value="shindesiddhesh13062003@gmail.com" type="text" class="form-control" required>
                 </div>
                 <div class="form-wrapper">
                     <label for="">Password</label>
-                    <input type="password" class="form-control">
+                    <input id="password" value="siddhesh" type="password" class="form-control" required>
                 </div>
                 <div class="form-wrapper">
                     <label for="">Confirm Password</label>
-                    <input type="password" class="form-control">
+                    <input id="cpassword" value="siddhesh" type="password" class="form-control" required>
                 </div>
                 <div class="checkbox">
                     <label>
@@ -67,28 +68,32 @@
                         <span class="checkmark"></span>
                     </label>
                 </div>
-                <button class="signup-btn">Signup</button>
+                <button id="signupBtn" class="signup-btn">Signup</button>
             </form>
         </div>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
     <script>
-        let signup = document.querySelector(".signup-btn");
-        const div = document.createElement("div");
-        signup.addEventListener("click", () => {
-            console.log("fired");
-            div.classList.add("snackbar");
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAKAyCEpD1kK0PXLh8vyi-Rjqqu4pnCuC8",
+            authDomain: "niranjan-ed345.firebaseapp.com",
+            projectId: "niranjan-ed345",
+            storageBucket: "niranjan-ed345.appspot.com",
+            messagingSenderId: "736749189078",
+            appId: "1:736749189078:web:9ad94a2f5ca34039689677",
+            measurementId: "G-3W4168D1LB"
+        };
 
-            div.id = "emailToast";
-            div.innerHTML = "Verification link has been send to your Email address";
-            document.body.appendChild(div);
-
-            var x = document.getElementById("emailToast");
-            x.className = "show";
-            setTimeout(function() {
-                x.className = x.className.replace("show", "");
-            }, 3000);
-        })
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig)
     </script>
+    <script src="./main.js"></script>
 </body>
 
 </html>

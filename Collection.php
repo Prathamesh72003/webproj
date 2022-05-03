@@ -41,7 +41,7 @@
 
               <!-- <ul class="side-icons">
                     <span><i class="fas fa-search"></i></span>
-                    <span><i class="far fa-heart"></i></span>
+                    <span><i class="fas fa-share"></i></span>
                     <span><i class="fas fa-sliders-h"></i></span>
                 </ul> -->
             </div>
@@ -61,7 +61,7 @@
 
               <!-- <ul class="side-icons">
                     <span><i class="fas fa-search"></i></span>
-                    <span><i class="far fa-heart"></i></span>
+                    <span><i class="fas fa-share"></i></span>
                     <span><i class="fas fa-sliders-h"></i></span>
                 </ul> -->
             </div>
@@ -81,7 +81,7 @@
 
               <!-- <ul class="side-icons">
                     <span><i class="fas fa-search"></i></span>
-                    <span><i class="far fa-heart"></i></span>
+                    <span><i class="fas fa-share"></i></span>
                     <span><i class="fas fa-sliders-h"></i></span>
                 </ul> -->
             </div>
@@ -101,7 +101,7 @@
 
               <!-- <ul class="side-icons">
                     <span><i class="fas fa-search"></i></span>
-                    <span><i class="far fa-heart"></i></span>
+                    <span><i class="fas fa-share"></i></span>
                     <span><i class="fas fa-sliders-h"></i></span>
                 </ul> -->
             </div>
@@ -121,7 +121,7 @@
 
               <!-- <ul class="side-icons">
                     <span><i class="fas fa-search"></i></span>
-                    <span><i class="far fa-heart"></i></span>
+                    <span><i class="fas fa-share"></i></span>
                     <span><i class="fas fa-sliders-h"></i></span>
                 </ul> -->
             </div>
@@ -141,7 +141,7 @@
 
               <!-- <ul class="side-icons">
                     <span><i class="fas fa-search"></i></span>
-                    <span><i class="far fa-heart"></i></span>
+                    <span><i class="fas fa-share"></i></span>
                     <span><i class="fas fa-sliders-h"></i></span>
                 </ul> -->
             </div>
@@ -161,7 +161,7 @@
 
               <!-- <ul class="side-icons">
                     <span><i class="fas fa-search"></i></span>
-                    <span><i class="far fa-heart"></i></span>
+                    <span><i class="fas fa-share"></i></span>
                     <span><i class="fas fa-sliders-h"></i></span>
                 </ul> -->
             </div>
@@ -181,7 +181,7 @@
 
               <!-- <ul class="side-icons">
                     <span><i class="fas fa-search"></i></span>
-                    <span><i class="far fa-heart"></i></span>
+                    <span><i class="fas fa-share"></i></span>
                     <span><i class="fas fa-sliders-h"></i></span>
                 </ul> -->
             </div>
@@ -201,7 +201,7 @@
 
               <!-- <ul class="side-icons">
                     <span><i class="fas fa-search"></i></span>
-                    <span><i class="far fa-heart"></i></span>
+                    <span><i class="fas fa-share"></i></span>
                     <span><i class="fas fa-sliders-h"></i></span>
                 </ul> -->
             </div>
@@ -221,7 +221,7 @@
 
               <!-- <ul class="side-icons">
                     <span><i class="fas fa-search"></i></span>
-                    <span><i class="far fa-heart"></i></span>
+                    <span><i class="fas fa-share"></i></span>
                     <span><i class="fas fa-sliders-h"></i></span>
                 </ul> -->
             </div>

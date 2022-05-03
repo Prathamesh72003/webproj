@@ -91,7 +91,7 @@
               <small class="count d-flex">0</small>
             </span>
           </a>
-          <span><i class="nav-heart far fa-heart"></i></span>
+          <!-- <span><i class="nav-heart fas fa-share"></i></span> -->
 
         </li>
       </ul>
