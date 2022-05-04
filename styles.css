@@ -717,7 +717,7 @@ nav .wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 3rem;
-  max-width: 130rem;
+  max-width: 114rem;
   padding: 0 1.6rem;
 }
 
@@ -1325,6 +1325,7 @@ th:last-child {
 }
 
 .col-3-of-4 .product-layout {
+  max-width: 114rem;
   grid-template-columns: repeat(4, 1fr);
 }
 

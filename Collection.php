@@ -1,3 +1,9 @@
+<?php
+include './db.php';
+
+$results_per_page = 1;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,217 +38,69 @@
 
         <div class="product-layout">
 
-          <div class="product">
-            <div class="img-container">
-              <img src="./images/New/new1.jpg" alt="" />
-              <!-- <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div> -->
+          <?php
 
-              <!-- <ul class="side-icons">
-                    <span><i class="fas fa-search"></i></span>
-                    <span><i class="fas fa-share"></i></span>
-                    <span><i class="fas fa-sliders-h"></i></span>
-                </ul> -->
-            </div>
-            <div class="bottom">
-              <a href="productDetails.php">Park Avenue soap</a>
-              <div class="price">
-                <span>₹150</span>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <div class="img-container">
-              <img src="./images/New/new2.jpg" alt="" />
-              <!-- <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div> -->
+          $category_id = $_GET['id'];
+          if (!isset($_GET['page'])) {
+            $page = 1;
+          } else {
+            $page = $_GET['page'];
+          }
+          $page_first_result = ($page - 1) * $results_per_page;
+          $sql = "SELECT * FROM `products` WHERE category_id=$category_id LIMIT " . $page_first_result . "," . $results_per_page;
+          $result = $conn->query($sql);
 
-              <!-- <ul class="side-icons">
-                    <span><i class="fas fa-search"></i></span>
-                    <span><i class="fas fa-share"></i></span>
-                    <span><i class="fas fa-sliders-h"></i></span>
-                </ul> -->
-            </div>
-            <div class="bottom">
-              <a href="productDetails.php">Park Avenue soap</a>
-              <div class="price">
-                <span>₹150</span>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <div class="img-container">
-              <img src="./images/New/new3.jpg" alt="" />
-              <!-- <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div> -->
+          if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+              $product_id = $row['id'];
+              $product_name = $row['name'];
+              $price = $row['price'];
+              $discount_price = $row['discount_price'];
+              $image_url = $row['image_url'];
 
-              <!-- <ul class="side-icons">
-                    <span><i class="fas fa-search"></i></span>
-                    <span><i class="fas fa-share"></i></span>
-                    <span><i class="fas fa-sliders-h"></i></span>
-                </ul> -->
-            </div>
-            <div class="bottom">
-              <a href="productDetails.php">Park Avenue soap</a>
-              <div class="price">
-                <span>₹150</span>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <div class="img-container">
-              <img src="./images/New/new4.jpg" alt="" />
-              <!-- <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div> -->
+              echo "
+                <div class='product'>
+                  <a href='productDetails.php?id=$product_id'>
+                    <div class='img-container'>
+                      <img src='$image_url' alt='' />
+                      <div class='addCart'>
+                        <i class='fas fa-shopping-cart'></i>
+                      </div>
 
-              <!-- <ul class="side-icons">
-                    <span><i class="fas fa-search"></i></span>
-                    <span><i class="fas fa-share"></i></span>
-                    <span><i class="fas fa-sliders-h"></i></span>
-                </ul> -->
-            </div>
-            <div class="bottom">
-              <a href="productDetails.php">Park Avenue soap</a>
-              <div class="price">
-                <span>₹150</span>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <div class="img-container">
-              <img src="./images/New/new5.jpg" alt="" />
-              <!-- <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div> -->
+                      <ul class='side-icons'>
+                        <span><i class='fas fa-share'></i></span>
+                      </ul>
+                    </div>
+                    <div class='bottom'>
+                      <a >$product_name</a>
+                      <div class='price'>
+                        <span>₹$discount_price</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              ";
+            }
+          }
 
-              <!-- <ul class="side-icons">
-                    <span><i class="fas fa-search"></i></span>
-                    <span><i class="fas fa-share"></i></span>
-                    <span><i class="fas fa-sliders-h"></i></span>
-                </ul> -->
-            </div>
-            <div class="bottom">
-              <a href="productDetails.php">Park Avenue soap</a>
-              <div class="price">
-                <span>₹150</span>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <div class="img-container">
-              <img src="./images/New/new6.jpg" alt="" />
-              <!-- <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div> -->
-
-              <!-- <ul class="side-icons">
-                    <span><i class="fas fa-search"></i></span>
-                    <span><i class="fas fa-share"></i></span>
-                    <span><i class="fas fa-sliders-h"></i></span>
-                </ul> -->
-            </div>
-            <div class="bottom">
-              <a href="productDetails.php">Park Avenue soap</a>
-              <div class="price">
-                <span>₹150</span>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <div class="img-container">
-              <img src="./images/New/new7.jpg" alt="" />
-              <!-- <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div> -->
-
-              <!-- <ul class="side-icons">
-                    <span><i class="fas fa-search"></i></span>
-                    <span><i class="fas fa-share"></i></span>
-                    <span><i class="fas fa-sliders-h"></i></span>
-                </ul> -->
-            </div>
-            <div class="bottom">
-              <a href="productDetails.php">Park Avenue soap</a>
-              <div class="price">
-                <span>₹150</span>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <div class="img-container">
-              <img src="./images/New/new8.jpg" alt="" />
-              <!-- <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div> -->
-
-              <!-- <ul class="side-icons">
-                    <span><i class="fas fa-search"></i></span>
-                    <span><i class="fas fa-share"></i></span>
-                    <span><i class="fas fa-sliders-h"></i></span>
-                </ul> -->
-            </div>
-            <div class="bottom">
-              <a href="productDetails.php">Park Avenue soap</a>
-              <div class="price">
-                <span>₹150</span>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <div class="img-container">
-              <img src="./images/New/new4.jpg" alt="" />
-              <!-- <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div> -->
-
-              <!-- <ul class="side-icons">
-                    <span><i class="fas fa-search"></i></span>
-                    <span><i class="fas fa-share"></i></span>
-                    <span><i class="fas fa-sliders-h"></i></span>
-                </ul> -->
-            </div>
-            <div class="bottom">
-              <a href="productDetails.php">Park Avenue soap</a>
-              <div class="price">
-                <span>₹150</span>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <div class="img-container">
-              <img src="./images/New/new2.jpg" alt="" />
-              <!-- <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div> -->
-
-              <!-- <ul class="side-icons">
-                    <span><i class="fas fa-search"></i></span>
-                    <span><i class="fas fa-share"></i></span>
-                    <span><i class="fas fa-sliders-h"></i></span>
-                </ul> -->
-            </div>
-            <div class="bottom">
-              <a href="productDetails.php">Park Avenue soap</a>
-              <div class="price">
-                <span>₹150</span>
-              </div>
-            </div>
-          </div>
-
-
-
+          ?>
         </div>
 
         <!-- PAGINATION -->
         <ul class="pagination">
-          <span>1</span>
-          <span>2</span>
-          <span class="icon">››</span>
-          <span class="last">Last »</span>
+          <?php
+
+          $id = $_GET['id'];
+          $sql = "SELECT * FROM `products` WHERE category_id=$id";
+          $result = $conn->query($sql);
+          $num = mysqli_num_rows($result);
+          $number_of_page = ceil($num / $results_per_page);
+          for ($i = 1; $i <= $number_of_page; $i++) {
+            echo "
+                <span><a href='./Collection.php?id=$id&page=$i'>$i</a></span>
+            ";
+          }
+          ?>
         </ul>
       </div>
     </div>

@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "h3";
+$dbname = "niranjan";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection

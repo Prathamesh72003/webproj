@@ -1,3 +1,7 @@
+<?php
+include './db.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,32 +33,21 @@
     <div class="row">
       <div class="swiper-container slider-1">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./images/banner_1.png" alt="" />
-            <!-- <div class="content">
-              <h1>Super Make-Up fullbox
-                <br />
-                starting from
-                <span>₹.1500</span>
-              </h1>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ad natus facilis magni corporis alias.</p>
+          <?php
+          $sql = "SELECT * FROM banner";
+          $result = $conn->query($sql);
 
-              <a href="">Shop Now</a>
-            </div> -->
-          </div>
-
-          <div class="swiper-slide">
-            <img src="./images/banner_2.png" alt="hero image" />
-            <!-- <div class="content">
-              <h1>You first Order
-                <br />
-                <span>30% off</span>
-                at Niranjan web store!
-              </h1>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ad natus facilis magni corporis alias.</p>
-              <a href="#">Shop Now</a>
-            </div> -->
-          </div>
+          if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+              $image = $row['image_url'];
+              // echo $image;
+              echo "
+                <div class='swiper-slide'>
+                    <img src='$image' />
+                </div>";
+            }
+          }
+          ?>
 
         </div>
       </div>
@@ -80,53 +73,27 @@
     </div>
 
     <div class="promotion-layout container">
-      <div class="promotion-item">
-        <img src="./images/Categories/skin.jpg" alt="" />
-        <div class="promotion-content">
-          <h3>Skin Care</h3>
-          <a href="./CollectionOnClick.php">SHOP NOW</a>
-        </div>
-      </div>
+      <?php
+      $sql = "SELECT * FROM categories";
+      $result = $conn->query($sql);
 
-      <div class="promotion-item">
-        <img src="./images/Categories/sun.jpg" alt="" />
-        <div class="promotion-content">
-          <h3>Sun Care</h3>
-          <a href="./CollectionOnClick.php">SHOP NOW</a>
-        </div>
-      </div>
-
-      <div class="promotion-item">
-        <img src="./images/Categories/hair.jpg" alt="" />
-        <div class="promotion-content">
-          <h3>Hair Care</h3>
-          <a href="./CollectionOnClick.php">SHOP NOW</a>
-        </div>
-      </div>
-      <div class="promotion-item">
-        <img src="./images/Categories/bodycare.jpeg" alt="" />
-        <div class="promotion-content">
-          <h3>Body Care</h3>
-          <a href="./CollectionOnClick.php">SHOP NOW</a>
-        </div>
-      </div>
-
-      <div class="promotion-item">
-        <img src="./images/Categories/jewel.jpg" alt="" />
-        <div class="promotion-content">
-          <h3>Decorative</h3>
-          <a href="./CollectionOnClick.php">SHOP NOW</a>
-        </div>
-      </div>
-
-      <div class="promotion-item">
-        <img src="./images/Categories/perfume.jpg" alt="" />
-        <div class="promotion-content">
-          <h3>Perfumes</h3>
-          <a href="./CollectionOnClick.php">SHOP NOW</a>
-        </div>
-      </div>
-
+      if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+          $category_id = $row['id'];
+          $image_url = $row['image_url'];
+          $category_name = $row['name'];
+          echo "
+            <div class='promotion-item'>
+              <img src='$image_url' />
+              <div class='promotion-content'>
+                <h3>$category_name</h3>
+                <a href='./Collection.php?id=$category_id'>SHOP NOW</a>
+              </div>
+            </div>
+          ";
+        }
+      }
+      ?>
 
     </div>
   </section>
@@ -141,166 +108,45 @@
     <div class="row container">
       <div class="swiper-container slider-2">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="product">
-              <div class="img-container">
-                <img src="./images/Featured/facewash.jpg" alt="" />
-                <div class="addCart">
-                  <i class="fas fa-shopping-cart"></i>
-                </div>
+          <?php
+          $sql = "SELECT * FROM `products` WHERE featured=1 ORDER BY date DESC LIMIT 10";
+          $result = $conn->query($sql);
 
-                <ul class="side-icons">
-                  <span><i class="fas fa-share"></i></span>
-                </ul>
-              </div>
-              <div class="bottom">
-                <a href="productDetails.php">Facewash</a>
-                <div class="price">
-                  <span>₹.150</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product">
-              <div class="img-container">
-                <img src="./images/Featured/lotion.jpg" alt="" />
-                <div class="addCart">
-                  <i class="fas fa-shopping-cart"></i>
-                </div>
+          if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+              $product_id = $row['id'];
+              $product_name = $row['name'];
+              $price = $row['price'];
+              $discount_price = $row['discount_price'];
+              $image_url = $row['image_url'];
 
-                <ul class="side-icons">
-                  <span><i class="fas fa-share"></i></span>
-                </ul>
-              </div>
-              <div class="bottom">
-                <a href="">Lotion</a>
-                <div class="price">
-                  <span>₹.350</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product">
-              <div class="img-container">
-                <img src="./images/Featured/serum.jpg" alt="" />
-                <div class="addCart">
-                  <i class="fas fa-shopping-cart"></i>
-                </div>
+              echo "
+                <div class='swiper-slide'>
+                  <div class='product'>
+                    <a href='productDetails.php?id=$product_id'>
+                      <div class='img-container'>
+                        <img src='$image_url' alt='' />
+                        <div class='addCart'>
+                          <i class='fas fa-shopping-cart'></i>
+                        </div>
 
-                <ul class="side-icons">
-                  <span><i class="fas fa-share"></i></span>
-                </ul>
-              </div>
-              <div class="bottom">
-                <a href="">Face Serum</a>
-                <div class="price">
-                  <span>₹. 500</span>
+                        <ul class='side-icons'>
+                          <span><i class='fas fa-share'></i></span>
+                        </ul>
+                      </div>
+                      <div class='bottom'>
+                        <a>$product_name</a>
+                        <div class='price'>
+                          <span>₹$discount_price</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product">
-              <div class="img-container">
-                <img src="./images/Featured/lipstick.jpg" alt="" />
-                <div class="addCart">
-                  <i class="fas fa-shopping-cart"></i>
-                </div>
-
-                <ul class="side-icons">
-                  <span><i class="fas fa-share"></i></span>
-                </ul>
-              </div>
-              <div class="bottom">
-                <a href="">Nykaa Lipstick</a>
-                <div class="price">
-                  <span>₹.130</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product">
-              <div class="img-container">
-                <img src="./images/Featured/facewash.jpg" alt="" />
-                <div class="addCart">
-                  <i class="fas fa-shopping-cart"></i>
-                </div>
-
-                <ul class="side-icons">
-                  <span><i class="fas fa-share"></i></span>
-                </ul>
-              </div>
-              <div class="bottom">
-                <a href="productDetails.php">Facewash</a>
-                <div class="price">
-                  <span>₹.150</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product">
-              <div class="img-container">
-                <img src="./images/Featured/lotion.jpg" alt="" />
-                <div class="addCart">
-                  <i class="fas fa-shopping-cart"></i>
-                </div>
-
-                <ul class="side-icons">
-                  <span><i class="fas fa-share"></i></span>
-                </ul>
-              </div>
-              <div class="bottom">
-                <a href="">Lotion</a>
-                <div class="price">
-                  <span>₹.350</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product">
-              <div class="img-container">
-                <img src="./images/Featured/serum.jpg" alt="" />
-                <div class="addCart">
-                  <i class="fas fa-shopping-cart"></i>
-                </div>
-
-                <ul class="side-icons">
-                  <span><i class="fas fa-share"></i></span>
-                </ul>
-              </div>
-              <div class="bottom">
-                <a href="">Face Serum</a>
-                <div class="price">
-                  <span>₹. 500</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product">
-              <div class="img-container">
-                <img src="./images/Featured/lipstick.jpg" alt="" />
-                <div class="addCart">
-                  <i class="fas fa-shopping-cart"></i>
-                </div>
-
-                <ul class="side-icons">
-                  <span><i class="fas fa-share"></i></span>
-                </ul>
-              </div>
-              <div class="bottom">
-                <a href="">Nykaa Lipstick</a>
-                <div class="price">
-                  <span>₹.130</span>
-                </div>
-              </div>
-            </div>
-          </div>
+              ";
+            }
+          }
+          ?>
 
         </div>
       </div>
@@ -325,163 +171,45 @@
     </div>
 
     <div class="product-layout" style="margin: 0 auto;">
-      <div class=" product">
-        <div class="img-container">
-          <img src="./images/New/new1.jpg" alt="" />
-          <div class="addCart">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
 
-          <ul class="side-icons">
-            <span><i class="fas fa-share"></i></span>
-          </ul>
-        </div>
-        <div class="bottom">
-          <a href="">Bambi Print Mini Backpack</a>
-          <div class="price">
-            <span>₹150</span>
-          </div>
-        </div>
-      </div>
+      <?php
+      $sql = "SELECT * FROM `products` WHERE quantity>0 ORDER BY date DESC LIMIT 8";
+      $result = $conn->query($sql);
 
-      <div class="product">
-        <div class="img-container">
-          <img src="./images/New/new7.jpg" alt="" />
-          <div class="addCart">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
+      if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+          $product_id = $row['id'];
+          $product_name = $row['name'];
+          $price = $row['price'];
+          $discount_price = $row['discount_price'];
+          $image_url = $row['image_url'];
 
-          <ul class="side-icons">
-            <span><i class="fas fa-share"></i></span>
-          </ul>
-        </div>
-        <div class="bottom">
-          <a href="">Bambi Print Mini Backpack</a>
-          <div class="price">
-            <span>₹150</span>
-            <span class="cancel">₹160</span>
-          </div>
-        </div>
-      </div>
+          echo "
+             <div class='product'>
+              <a href='productDetails.php?id=$product_id'>
+                <div class='img-container'>
+                  <img src='$image_url' alt='' />
+                  <div class='addCart'>
+                    <i class='fas fa-shopping-cart'></i>
+                  </div>
 
-      <div class="product">
-        <div class="img-container">
-          <img src="./images/New/new8.jpg" alt="" />
-          <div class="addCart">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
+                  <ul class='side-icons'>
+                    <span><i class='fas fa-share'></i></span>
+                  </ul>
+                </div>
+                <div class='bottom'>
+                  <a href=''>$product_name</a>
+                  <div class='price'>
+                    <span>₹$discount_price</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          ";
+        }
+      }
+      ?>
 
-          <ul class="side-icons">
-            <span><i class="fas fa-share"></i></span>
-          </ul>
-        </div>
-        <div class="bottom">
-          <a href="">Bambi Print Mini Backpack</a>
-          <div class="price">
-            <span>₹150</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="product">
-        <div class="img-container">
-          <img src="./images/New/new4.jpg" alt="" />
-          <div class="addCart">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
-
-          <ul class="side-icons">
-            <span><i class="fas fa-share"></i></span>
-          </ul>
-        </div>
-        <div class="bottom">
-          <a href="">Bambi Print Mini Backpack</a>
-          <div class="price">
-            <span>₹150</span>
-            <span class="cancel">₹160</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="product">
-        <div class="img-container">
-          <img src="./images/New/new5.jpg" alt="" />
-          <div class="addCart">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
-
-          <ul class="side-icons">
-            <span><i class="fas fa-share"></i></span>
-          </ul>
-        </div>
-        <div class="bottom">
-          <a href="">Bambi Print Mini Backpack</a>
-          <div class="price">
-            <span>₹150</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="product">
-        <div class="img-container">
-          <img src="./images/New/new6.jpg" alt="" />
-          <div class="addCart">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
-
-          <ul class="side-icons">
-            <span><i class="fas fa-share"></i></span>
-          </ul>
-        </div>
-        <div class="bottom">
-          <a href="">Bambi Print Mini Backpack</a>
-
-          <div class="price">
-            <span>₹150</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="product">
-        <div class="img-container">
-          <img src="./images/New/new2.jpg" alt="" />
-          <div class="addCart">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
-
-          <ul class="side-icons">
-            <span><i class="fas fa-share"></i></span>
-          </ul>
-        </div>
-        <div class="bottom">
-          <a href="">Bambi Print Mini Backpack</a>
-
-          <div class="price">
-            <span>₹150</span>
-            <span class="cancel">₹160</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="product">
-        <div class="img-container">
-          <img src="./images/New/new3.jpg" alt="" />
-          <div class="addCart">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
-
-          <ul class="side-icons">
-            <span><i class="fas fa-share"></i></span>
-          </ul>
-        </div>
-        <div class="bottom">
-          <a href="">Bambi Print Mini Backpack</a>
-          <div class="price">
-            <span>₹150</span>
-            <span class="cancel">₹160</span>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -517,27 +245,24 @@
     <div class="brand-layout container">
       <div class="swiper-container slider-3">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./images/brand1.png" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/brand2.png" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/brand3.png" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/brand4.png" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/brand5.png" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/brand6.png" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="./images/brand7.png" alt="">
-          </div>
+          <?php
+          $sql = "SELECT * FROM brands";
+          $result = $conn->query($sql);
+
+          if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+              $brand_name = $row['name'];
+              $image_url = $row['image_url'];
+
+              echo "
+                <div class='swiper-slide'>
+                   <img src='$image_url'>
+                </div>
+              ";
+            }
+          }
+          ?>
+
 
         </div>
       </div>
