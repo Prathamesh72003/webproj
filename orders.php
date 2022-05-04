@@ -1,3 +1,9 @@
+<?php
+
+include './db.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,91 +36,45 @@
         <th>Amount</th>
         <th>Status</th>
       </tr>
-      <tr>
-        <td>
-          <div class="cart-info">
-            <img src="./images/product-1.jpg" alt="" />
-            <div>
-              <p>Bambi Print Mini Backpack</p>
-              <span>Price: ₹ 500.00</span>
-              <br />
+
+      <?php
+      $query = mysqli_query($conn, "SELECT *, orders.quantity AS order_quantity FROM `orders` INNER JOIN products ON orders.product_id=products.id where cust_id=1");
+      while ($run = mysqli_fetch_array($query)) {
+        $image = $run['image_url'];
+        $name = $run['name'];
+        $price = $run['amount'];
+        $quantity = $run['order_quantity'];
+        $status = $run['order_status'];
+        if ($status == 1) {
+          $st = "Completed!";
+        } else {
+          $st = "Processing...";
+        }
+
+      ?>
+        <tr>
+          <td>
+            <div class="cart-info">
+              <img src="<?= $image ?>" alt="" />
+              <div style="align-items: center;
+                          justify-content: center;
+                          display: flex;
+                          flex-direction: column;">
+                <p><?= $name ?></p>
+                <span>Price: ₹ <?= $price ?></span>
+              </div>
             </div>
-          </div>
-        </td>
-        <td>
-          <h4>4</h4>
-        </td>
-        <td>₹ 50.00</td>
-        <td>Order placed</td>
-      </tr>
-      <tr>
-        <td>
-          <div class="cart-info">
-            <img src="./images/product-2.jpg" alt="" />
-            <div>
-              <p>Bambi Print Mini Backpack</p>
-              <span>Price: ₹ 900.00</span>
-              <br />
-            </div>
-          </div>
-        </td>
-        <td>
-          <h4>4</h4>
-        </td>
-        <td>₹ 90.00</td>
-        <td>Out for delivery</td>
-      </tr>
-      <tr>
-        <td>
-          <div class="cart-info">
-            <img src="./images/product-3.jpg" alt="" />
-            <div>
-              <p>Bambi Print Mini Backpack</p>
-              <span>Price: ₹ 700.00</span>
-              <br />
-            </div>
-          </div>
-        </td>
-        <td>
-          <h4>4</h4>
-        </td>
-        <td>₹ 60.00</td>
-        <td>Completed</td>
-      </tr>
-      <tr>
-        <td>
-          <div class="cart-info">
-            <img src="./images/product-4.jpg" alt="" />
-            <div>
-              <p>Bambi Print Mini Backpack</p>
-              <span>Price: ₹ 600.00</span>
-              <br />
-            </div>
-          </div>
-        </td>
-        <td>
-          <h4>4</h4>
-        </td>
-        <td>₹ 60.00</td>
-        <td>Completed</td>
-      </tr>
-      <tr>
-        <td>
-          <div class="cart-info">
-            <img src="./images/product-5.jpg" alt="" />
-            <div>
-              <p>Bambi Print Mini Backpack</p>
-              <span>Price: ₹ 600.00</span>
-              <br />
-            </div>
-          </div>
-        </td>
-        <td>
-          <h4>4</h4>
-        </td>
-        <td>₹ 60.00</td>
-        <td>Completed</td>
-      </tr>
+          </td>
+          <td>
+            <h4><?= $quantity ?></h4>
+          </td>
+          <td>₹ <?= $price ?></td>
+          <td><?= $st ?></td>
+        </tr>
+
+      <?php
+      }
+      ?>
     </table>
   </div>
 

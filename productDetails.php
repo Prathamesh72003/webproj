@@ -1,3 +1,6 @@
+<?php
+include './db.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,154 +32,70 @@
   <!-- Product Details -->
   <section class="section product-detail">
     <div class="details container">
-      <div class="left">
-        <div class="main row">
-          <div class="swiper-container slider-4">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="./images/product-1.jpg" alt="" />
+      <?php
+      $id = $_GET['id'];
+      $query = mysqli_query($conn, "SELECT *, 
+                            products.name AS product_name, products.image_url 
+                            AS product_image, categories.name 
+                            AS category_name FROM `products` 
+                            INNER JOIN categories ON products.category_id=categories.id 
+                            where products.id=$id");
+      while ($run = mysqli_fetch_array($query)) {
+        $id = $run['id'];
+        $image = $run['product_image'];
+        $name = $run['name'];
+        $price = $run['price'];
+        $discount_price = $run['discount_price'];
+        $details = $run['details'];
+        $cat_name = $run['category_name'];
+      ?>
+        <div class="left">
+          <div class="main row">
+            <div class="swiper-container slider-4">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="<?= $image ?>" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/product-2.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/product-3.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/product-1.jpg" alt="" />
+                </div>
               </div>
-              <div class="swiper-slide">
-                <img src="./images/product-2.jpg" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/product-3.jpg" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/product-1.jpg" alt="" />
-              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
         </div>
-      </div>
-      <div class="right">
-        <span>Hair care</span>
-        <h1>Shampoo</h1>
-        <div style="display: flex; flex-direction:row">
-          <div class="price">₹50</div>
-          <div class="prevPrice">₹50</div>
-        </div>
-        <!-- <form>
-          <div>
-            <select>
-              <option value="Select Quantity" selected disabled>
-                Select Quantity
-              </option>
-              <option value="1">32</option>
-              <option value="2">42</option>
-              <option value="3">52</option>
-              <option value="4">62</option>
-            </select>
-            <span><i class="fas fa-chevron-down"></i></span>
+        <div class="right">
+          <span><?= $cat_name ?></span>
+          <h1><?= $name ?></h1>
+          <div style="display: flex; flex-direction:row">
+            <div class="price">₹<?= $discount_price ?></div>
+            <div class="prevPrice">₹<?= $price ?></div>
           </div>
-        </form> -->
 
-        <form class="form">
-          <input type="number" placeholder="1" style="width: 60px" />
-          <a href="cart.php" class="addCart">Add To Cart</a>
-        </form>
-        <h3>Product Detail</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero minima
-          delectus nulla voluptates nesciunt quidem laudantium, quisquam
-          voluptas facilis dicta in explicabo, laboriosam ipsam suscipit!
-        </p>
-      </div>
+          <form class="form">
+            <input type="number" placeholder="1" style="width: 60px" />
+            <a href="cart.php" class="addCart">Add To Cart</a>
+          </form>
+          <h3>Product Detail</h3>
+          <p>
+            <?= $details ?>
+          </p>
+        </div>
+
+      <?php
+      }
+      ?>
     </div>
   </section>
 
-  <!-- Related Products -->
 
-  <section class="section related-products">
-    <div class="title">
-      <h2>Related Products</h2>
-      <span>Select from the premium product brands and save plenty money</span>
-    </div>
-    <div class="product-layout container">
-      <div class="product">
-        <div class="img-container">
-          <img src="./images/product-1.jpg" alt="" />
-          <div class="addCart">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
-
-          <ul class="side-icons">
-            <span><i class="fas fa-search"></i></span>
-            <span><i class="fas fa-share"></i></span>
-            <span><i class="fas fa-sliders-h"></i></span>
-          </ul>
-        </div>
-        <div class="bottom">
-          <a href="">Bambi Print Mini Backpack</a>
-          <div class="price">
-            <span>₹150</span>
-          </div>
-        </div>
-      </div>
-      <div class="product">
-        <div class="img-container">
-          <img src="./images/product-2.jpg" alt="" />
-          <div class="addCart">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
-
-          <ul class="side-icons">
-            <span><i class="fas fa-search"></i></span>
-            <span><i class="fas fa-share"></i></span>
-            <span><i class="fas fa-sliders-h"></i></span>
-          </ul>
-        </div>
-        <div class="bottom">
-          <a href="">Bambi Print Mini Backpack</a>
-          <div class="price">
-            <span>₹150</span>
-          </div>
-        </div>
-      </div>
-      <div class="product">
-        <div class="img-container">
-          <img src="./images/product-3.jpg" alt="" />
-          <div class="addCart">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
-
-          <ul class="side-icons">
-            <span><i class="fas fa-search"></i></span>
-            <span><i class="fas fa-share"></i></span>
-            <span><i class="fas fa-sliders-h"></i></span>
-          </ul>
-        </div>
-        <div class="bottom">
-          <a href="">Bambi Print Mini Backpack</a>
-          <div class="price">
-            <span>₹150</span>
-          </div>
-        </div>
-      </div>
-      <div class="product">
-        <div class="img-container">
-          <img src="./images/product-4.jpg" alt="" />
-          <div class="addCart">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
-
-          <ul class="side-icons">
-            <span><i class="fas fa-search"></i></span>
-            <span><i class="fas fa-share"></i></span>
-            <span><i class="fas fa-sliders-h"></i></span>
-          </ul>
-        </div>
-        <div class="bottom">
-          <a href="">Bambi Print Mini Backpack</a>
-          <div class="price">
-            <span>₹150</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Footer -->
   <?php

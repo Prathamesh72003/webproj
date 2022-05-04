@@ -21,6 +21,25 @@
         <li><a href="/webproj/index.php">Home</a></li>
         <li>
           <a href="" class="desktop-item">Categories <span><i class="fas fa-chevron-down"></i></span></a>
+          <input type="checkbox" id="showdrop2" />
+          <label for="showdrop2" class="mobile-item">More <span><i class="fas fa-chevron-down"></i></span></label>
+          <ul class="drop-menu2">
+            <?php
+            $sql = "SELECT * FROM `categories`";
+            $result = $conn->query($sql);
+
+            while ($row = $result->fetch_assoc()) {
+              $id = $row['id'];
+              $name = $row['name'];
+              echo "
+                <li><a href='/webproj/Collection.php?id=$id'>$name</a></li>
+              ";
+            }
+            ?>
+          </ul>
+        </li>
+        <!-- <li>
+          <a href="" class="desktop-item">Categories <span><i class="fas fa-chevron-down"></i></span></a>
           <input type="checkbox" id="showMega" />
           <label for="showMega" class="mobile-item">Categories <span><i class="fas fa-chevron-down"></i></span></label>
           <div class="mega-box">
@@ -64,15 +83,16 @@
               </div>
             </div>
           </div>
-        </li>
+        </li> -->
         <li><a href="/webproj/products.php">Products</a></li>
 
         <li><a href="/webproj/auth/Login">Login</a></li>
 
         <li><a href="/webproj/auth/SignUp/">Signup</a></li>
 
+        <li><a href="/webproj/orders.php">Orders</a></li>
 
-        <li>
+        <!-- <li>
           <a href="" class="desktop-item">More <span><i class="fas fa-chevron-down"></i></span></a>
           <input type="checkbox" id="showdrop2" />
           <label for="showdrop2" class="mobile-item">More <span><i class="fas fa-chevron-down"></i></span></label>
@@ -82,13 +102,13 @@
             <li><a href="">Faq</a></li>
             <li><a href="/webproj/orders.php">Orders</a></li>
           </ul>
-        </li>
+        </li> -->
         <!-- icons -->
         <li class="icons">
           <a href="/webproj/cart.php">
             <span>
               <img src="/webproj/images/shoppingBag.svg" alt="" />
-              <small class="count d-flex">0</small>
+              <!-- <small class="count d-flex">0</small> -->
             </span>
           </a>
           <!-- <span><i class="nav-heart fas fa-share"></i></span> -->

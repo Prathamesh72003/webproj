@@ -15,6 +15,7 @@ include './db.php';
 
   <!-- Custom StyleSheet -->
   <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./css/snackbar.css" />
   <!-- Favicon -->
   <link rel="shortcut icon" href="/webproj/images/logo.png" type="image/png" />
   <title>Niranjan</title>
@@ -29,6 +30,11 @@ include './db.php';
 
   <!-- Cart Items -->
   <div class="container cart">
+    <?php
+    $subtotal = 0;
+    $tax = 50;
+    $total_amount = 0;
+    ?>
     <table>
       <tr>
         <th>Product</th>
@@ -48,12 +54,13 @@ include './db.php';
           $product_id = $row['product_id'];
           $price = $row['price'];
           $discount_price = $row['discount_price'];
-          $total = $row['total'];
+          // $total = $row['total'];
           $cart_quantity = $row['cart_quantity'];
           $product_quantity = $row['product_quantity'];
           $image_url = $row['image_url'];
           $cart_item_total = $discount_price * $cart_quantity;
 
+          $subtotal += $cart_item_total;
           echo "
             <tr>
               <td>
@@ -63,14 +70,14 @@ include './db.php';
                     <p>$product_name</p>
                     <span>Price: $discount_price</span>
                     <br />
-                    <a href='#'>remove</a>
+                    <a onclick='removeFromCart($cust_id, $product_id)'>Remove</a>
                   </div>
                 </div>
               </td>
-              <td>
-                <button class='' onsubmit='decrease($cart_id, $ccust_id, $product_id, $cart_quantity, $cart_quantity-1 )' >-</button>
-                <input id='$cart_id' name='$cust_id-$product_id-$cart_quantity-$discount_price' class='btnCounter' type='number' value='$cart_quantity' min='1' max='$product_quantity' />
-                <button class='' >+</button>
+              <td style='display: flex; align-items: center; '>
+                <button class='counter' onclick='updateCart($cart_id, $cust_id, $product_id, $cart_quantity, $cart_quantity-1, $discount_price)' >-</button>
+                <p style='padding: 5px'>$cart_quantity </p>
+                <button class='counter' onclick='updateCart($cart_id, $cust_id, $product_id, $cart_quantity, $cart_quantity+1,  $discount_price)'>+</button>
               </td>
               <td>₹$cart_item_total</td>
             </tr>
@@ -84,20 +91,24 @@ include './db.php';
       <table>
         <tr>
           <td>Subtotal</td>
-          <td>₹200</td>
+          <td>₹<?= $subtotal ?></td>
         </tr>
         <tr>
           <td>Tax</td>
-          <td>₹50</td>
+          <td>₹<?= $tax ?></td>
         </tr>
         <tr>
           <td>Total</td>
-          <td>₹250</td>
+          <td>₹<?php echo $subtotal + $tax ?></td>
         </tr>
       </table>
       <a href="#" class="checkout btn">Proceed To Checkout</a>
     </div>
   </div>
+  <div id="loading">
+    <img id="loading-image" src="https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif" alt="Loading..." />
+  </div>
+
 
   <!-- Footer -->
   <?php
@@ -110,37 +121,115 @@ include './db.php';
   <!-- Custom Scripts -->
   <script src="./js/index.js"></script>
   <script>
-    document.querySelectorAll('.btnCounter').forEach(item => {
-      item.addEventListener('change', event => {
-        alert(event.target.id + " " + event.target.value + " " + event.target.name);
+    const sendToast = (msg) => {
+      const div = document.createElement("div");
+      div.classList.add("snackbar");
 
-        var arr = event.target.name.split('-');
+      div.id = "emailToast";
+      div.innerHTML = msg;
+      document.body.appendChild(div);
+      var x = document.getElementById("emailToast");
+      x.className = "show";
+      setTimeout(function() {
+        x.className = x.className.replace("show", "");
+        document.body.removeChild(div);
+      }, 3000);
+    };
 
-        var data = new FormData();
-        data.append("updateCart", "updateCart");
-        data.append("cust_id", arr[0]);
-        data.append("p_id", arr[1]);
-        data.append("quantity", arr[2]);
-        data.append("total", arr[2] * arr[3]);
+    var loading_div = document.getElementById("loading");
 
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "functions.php", true);
-        xhr.onload = function() {
-          // do something to response
-          console.log(this.responseText);
-          if (this.responseText == "true") {
-            // setTimeout(() => {
-            //   window.location.assign("/webproj/auth/Login");
-            // }, 3000);
+    function updateCart(cart_id, cust_id, product_id, cart_quantity, new_quantity, price) {
+      if (new_quantity == 0) {
+        sendToast("Quantity cannot be 0");
+        return false;
+      }
+      loading_div.style.display = "flex";
+      var data = new FormData();
+      data.append("updateCart", "updateCart");
+      data.append("cart_id", cart_id);
+      // data.append("cust_id", cust_id);
+      data.append("p_id", product_id);
+      data.append("quantity", cart_quantity);
+      data.append("newQuantity", new_quantity);
+      console.log(data);
 
-          } else {
-            sendToast("Cannot be added");
-            event.target.value = arr[2];
-          }
-        };
-        xhr.send(data);
-      })
-    })
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "functions.php", true);
+      xhr.onload = function() {
+        // do something to response
+        console.log(this.responseText);
+        if (this.responseText == "true") {
+          // sendToast
+          location.reload();
+
+        } else if (this.responseText == "false") {
+          alert("not")
+          sendToast("Cannot be added stock limit reached");
+        }
+      };
+      xhr.send(data);
+
+      loading_div.style.display = "none";
+    }
+
+    function removeFromCart(cust_id, p_id) {
+      loading_div.style.display = "flex";
+      var data = new FormData();
+      data.append("removeFromCart", "removeFromCart");
+      data.append("cust_id", cust_id);
+      data.append("p_id", p_id);
+      console.log(data);
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "functions.php", true);
+      xhr.onload = function() {
+        // do something to response
+        console.log(this.responseText);
+        if (this.responseText == "true") {
+          // sendToast
+          sendToast("Removed item successfully");
+          location.reload();
+
+        } else if (this.responseText == "false") {
+          sendToast("Unable to remove from cart. Please try again");
+        }
+      };
+      xhr.send(data);
+
+      loading_div.style.display = "none";
+    }
+
+    // document.querySelectorAll('.btnCounter').forEach(item => {
+    //   item.addEventListener('change', event => {
+    //     alert(event.target.id + " " + event.target.value + " " + event.target.name);
+
+    //     var arr = event.target.name.split('-');
+
+    //     var data = new FormData();
+    //     data.append("updateCart", "updateCart");
+    //     data.append("cust_id", arr[0]);
+    //     data.append("p_id", arr[1]);
+    //     data.append("quantity", arr[2]);
+    //     data.append("total", arr[2] * arr[3]);
+
+    //     var xhr = new XMLHttpRequest();
+    //     xhr.open("POST", "functions.php", true);
+    //     xhr.onload = function() {
+    //       // do something to response
+    //       console.log(this.responseText);
+    //       if (this.responseText == "true") {
+    //         // setTimeout(() => {
+    //         //   window.location.assign("/webproj/auth/Login");
+    //         // }, 3000);
+
+    //       } else {
+    //         sendToast("Cannot be added");
+    //         event.target.value = arr[2];
+    //       }
+    //     };
+    //     xhr.send(data);
+    //   })
+    // })
   </script>
 </body>
 
