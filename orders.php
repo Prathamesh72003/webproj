@@ -38,10 +38,14 @@ include './db.php';
       </tr>
 
       <?php
-      $query = mysqli_query($conn, "SELECT *, orders.quantity AS order_quantity FROM `orders` INNER JOIN products ON orders.product_id=products.id where cust_id=1");
+      $query = mysqli_query($conn, "SELECT *, 
+                                    products.id AS product_id,
+                                    orders.quantity AS order_quantity 
+                                    FROM `orders` INNER JOIN products ON orders.product_id=products.id where cust_id=1");
       while ($run = mysqli_fetch_array($query)) {
         $image = $run['image_url'];
         $name = $run['name'];
+        $product_id = $run['product_id'];
         $price = $run['amount'];
         $quantity = $run['order_quantity'];
         $status = $run['order_status'];
@@ -60,7 +64,7 @@ include './db.php';
                           justify-content: center;
                           display: flex;
                           flex-direction: column;">
-                <p><?= $name ?></p>
+                <a href="./productDetails.php?id=<?= $product_id ?>"><?= $name ?></a>
                 <span>Price: ₹ <?= $price ?></span>
               </div>
             </div>

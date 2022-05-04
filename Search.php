@@ -16,6 +16,7 @@ $results_per_page = 4;
 
     <!-- Custom StyleSheet -->
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./css/snackbar.css" />
     <!-- Favicon -->
     <link rel="shortcut icon" href="/webproj/images/logo.png" type="image/png" />
     <title>Niranjan</title>
@@ -68,22 +69,26 @@ $results_per_page = 4;
                             $price = $row['price'];
                             $discount_price = $row['discount_price'];
                             $image_url = $row['image_url'];
+                            $cust_id = 1;
 
                             echo "
                                 <div class='product'>
-                                    <a href='productDetails.php?id=$product_id'>
-                                        <div class='img-container'>
-                                            <img src='$image_url' alt='' />
+                                    <div class='img-container'>
+                                        <img src='$image_url' alt='' />
+                                        <button onclick='performOnCart($cust_id, $product_id )' style='z-index: 100; background: none; outline: none; border: none;'>
                                             <div class='addCart'>
                                                 <i class='fas fa-shopping-cart'></i>
                                             </div>
+                                        </button>
 
-                                            <ul class='side-icons'>
-                                                <span><i class='fas fa-share'></i></span>
-                                            </ul>
-                                        </div>
+                                        <ul class='side-icons'>
+                                            <span><i class='fas fa-share'></i></span>
+                                        </ul>
+                                    </div>
+                                    <a href='productDetails.php?id=$product_id'>
+
                                         <div class='bottom'>
-                                            <a>$product_name</a>
+                                            <a href='productDetails.php?id=$product_id'>$product_name</a>
                                             <div class='price'>
                                                 <span>₹$discount_price</span>
                                             </div>
@@ -126,6 +131,7 @@ $results_per_page = 4;
 
     <!-- Custom Scripts -->
     <script src="./js/index.js"></script>
+    <script src="./functions.js"></script>
 </body>
 
 </html>

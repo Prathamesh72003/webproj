@@ -66,10 +66,12 @@ include './db.php';
               <td>
                 <div class='cart-info'>
                   <img src='$image_url' alt='' />
-                  <div>
-                    <p>$product_name</p>
+                  <div style='justify-content: center;
+                          display: flex;
+                          flex-direction: column;'>
+                    <a href='./productDetails.php?id=$product_id'>$product_name</a>
+                    
                     <span>Price: $discount_price</span>
-                    <br />
                     <a onclick='removeFromCart($cust_id, $product_id)'>Remove</a>
                   </div>
                 </div>

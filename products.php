@@ -15,6 +15,7 @@ $results_per_page = 4;
 
   <!-- Custom StyleSheet -->
   <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./css/snackbar.css" />
   <!-- Favicon -->
   <link rel="shortcut icon" href="/webproj/images/logo.png" type="image/png" />
   <title>Niranjan</title>
@@ -61,10 +62,12 @@ $results_per_page = 4;
 
           $query = mysqli_query($conn, "SELECT * FROM products LIMIT " . $page_first_result . "," . $results_per_page);
           while ($run = mysqli_fetch_array($query)) {
+            $product_id = $run['id'];
             $image = $run['image_url'];
             $name = $run['name'];
             $price = $run['discount_price'];
             $id = $run['id'];
+            $cust_id = 1;
 
           ?>
 
