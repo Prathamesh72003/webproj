@@ -1,5 +1,7 @@
 <?php
 include './db.php';
+
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +19,7 @@ include './db.php';
 
   <!-- Custom StyleSheet -->
   <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./css/snackbar.css" />
   <!-- Favicon -->
   <link rel="shortcut icon" href="/webproj/images/logo.png" type="image/png" />
   <title>Niranjan</title>
@@ -35,13 +38,16 @@ include './db.php';
       <?php
       $id = $_GET['id'];
       $query = mysqli_query($conn, "SELECT *, 
-                            products.name AS product_name, products.image_url 
-                            AS product_image, categories.name 
-                            AS category_name FROM `products` 
+                            products.name AS product_name, 
+                            products.id AS product_id, 
+                            products.image_url AS product_image, 
+                            categories.name AS category_name 
+                            FROM `products` 
                             INNER JOIN categories ON products.category_id=categories.id 
                             where products.id=$id");
       while ($run = mysqli_fetch_array($query)) {
         $id = $run['id'];
+        $product_id = $run['product_id'];
         $image = $run['product_image'];
         $name = $run['name'];
         $price = $run['price'];
@@ -51,24 +57,8 @@ include './db.php';
       ?>
         <div class="left">
           <div class="main row">
-            <div class="swiper-container slider-4">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="<?= $image ?>" alt="" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./images/product-2.jpg" alt="" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./images/product-3.jpg" alt="" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="./images/product-1.jpg" alt="" />
-                </div>
-              </div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            </div>
+            <img src="<?= $image ?>" alt="" />
+
           </div>
         </div>
         <div class="right">
@@ -79,9 +69,10 @@ include './db.php';
             <div class="prevPrice">₹<?= $price ?></div>
           </div>
 
-          <form class="form">
-            <input type="number" placeholder="1" style="width: 60px" />
-            <a href="cart.php" class="addCart">Add To Cart</a>
+          <form class="form" method="POST">
+            <input type="number" name="qty" min="1" value="1" style="width: 60px" />
+            <input type="number" name="p_id" hidden value="<?php echo $product_id ?>">
+            <button class="addCartDetails">Add To Cart</button>
           </form>
           <h3>Product Detail</h3>
           <p>
@@ -107,21 +98,43 @@ include './db.php';
 
   <!-- Custom Scripts -->
   <script src="./js/index.js"></script>
-  <script type="text/javascript">
-    const swiper4 = new Swiper(".slider-4", {
-      autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-      },
-      grabCursor: true,
-      effect: "fade",
-      loop: true,
-      navigation: {
-        nextEl: ".swiper-next",
-        prevEl: ".swiper-prev",
-      },
-    });
-  </script>
+  <script src="./functions.js"></script>
+
+  <?php
+  if (isset($_POST['qty'])) {
+    if (isset($_SESSION['cust_id'])) {
+      $cust_id = $_SESSION['cust_id'];
+      $product_id = $_POST['p_id'];
+      $quantity = $_POST['qty'];
+      if ($quantity > 0) {
+        $sql = "SELECT * FROM cart where cust_id=$cust_id and product_id=$product_id";
+        $result = $conn->query($sql);
+        $count = mysqli_num_rows($result);
+        if ($count > 0) {
+          $sql = "UPDATE cart set quantity=(SELECT quantity from cart where cust_id=$cust_id and product_id=$product_id)+$quantity where cust_id=$cust_id and product_id=$product_id";
+          $result = $conn->query($sql);
+          if ($result) {
+            echo "<script>sendToast('Added to cart')</script>";
+          } else {
+            echo "<script>sendToast('Something went wrong please try again')</script>";
+          }
+        } else {
+          $sql = "INSERT into cart (cust_id, product_id, quantity) VALUES($cust_id, $product_id, $quantity)";
+          $result = $conn->query($sql);
+          if ($result) {
+            echo "<script>sendToast('Added to cart')</script>";
+          } else {
+            echo "<script>sendToast('Something went wrong please try again')</script>";
+          }
+        }
+      } else {
+        echo "<script>sendToast('Quantity should be more than 0')</script>";
+      }
+    } else {
+      echo "<script>sendToast('Please sign in or sign up to add to cart')</script>";
+    }
+  }
+  ?>
 </body>
 
 </html>

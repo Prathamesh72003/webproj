@@ -1,5 +1,7 @@
 <?php
 include './db.php';
+session_start();
+$cust_id = $_SESSION['cust_id'];
 
 $results_per_page = 4;
 ?>
@@ -69,7 +71,7 @@ $results_per_page = 4;
                             $price = $row['price'];
                             $discount_price = $row['discount_price'];
                             $image_url = $row['image_url'];
-                            $cust_id = 1;
+                            // $cust_id = 1;
 
                             echo "
                                 <div class='product'>

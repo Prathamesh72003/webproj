@@ -58,3 +58,11 @@ if (isset($_POST['performOnCart'])) {
         } else echo "remove";
     }
 }
+
+
+if (isset($_GET['logout'])) {
+    session_start();
+    unset($_SESSION['cust_id']);
+    session_destroy();
+    echo '<script>window.open("/webproj/index.php", "_self")</script>';
+}

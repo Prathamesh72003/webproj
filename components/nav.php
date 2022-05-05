@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <nav class="nav">
   <div class="wrapper container">
     <div class="logo">
@@ -86,11 +90,21 @@
         </li> -->
         <li><a href="/webproj/products.php">Products</a></li>
 
-        <li><a href="/webproj/auth/Login">Login</a></li>
+        <?php
+        if (!isset($_SESSION['cust_id'])) {
+          echo '
+            <li><a href="/webproj/auth/Login">Login</a></li>
+            <li><a href="/webproj/auth/SignUp/">Signup</a></li>
+            <li><a href="/webproj/orders.php">Orders</a></li>
+          ';
+        } else {
+          echo '
+            <li><a href="/webproj/orders.php">Orders</a></li>
+            <li><a href="/webproj/functions.php?logout=true">Logout</a></li>
+          ';
+        }
+        ?>
 
-        <li><a href="/webproj/auth/SignUp/">Signup</a></li>
-
-        <li><a href="/webproj/orders.php">Orders</a></li>
 
         <!-- <li>
           <a href="" class="desktop-item">More <span><i class="fas fa-chevron-down"></i></span></a>

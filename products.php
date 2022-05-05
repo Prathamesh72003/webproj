@@ -1,5 +1,7 @@
 <?php
 include './db.php';
+session_start();
+$cust_id = $_SESSION['cust_id'];
 $results_per_page = 4;
 ?>
 
@@ -67,7 +69,7 @@ $results_per_page = 4;
             $name = $run['name'];
             $price = $run['discount_price'];
             $id = $run['id'];
-            $cust_id = 1;
+            // $cust_id = 1;
 
           ?>
 

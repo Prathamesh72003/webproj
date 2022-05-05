@@ -1257,7 +1257,10 @@ th:last-child {
   margin-right: 2rem;
 }
 
-.product-detail .form .addCart {
+.addCartDetails {
+  cursor: pointer;
+  outline: none;
+  border: none;
   background: var(--primary);
   padding: 0.8rem 4rem;
   color: var(--white);

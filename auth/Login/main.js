@@ -13,19 +13,19 @@ var sendToast = (msg) => {
   }, 3000);
 };
 
-firebase.auth().onAuthStateChanged(function (user) {
-  console.log(user);
-  // firebase.auth().currentUser.reload();
-  if (user) {
-    var user = firebase.auth().currentUser;
-    if (user != null && user.emailVerified == true) {
-      createSessionAndSignIn(user.email);
-    } else {
-      sendToast("Email is not verified please verify email");
-    }
-  }
-  // window.user = user; // user is undefined if no user signed in
-});
+// firebase.auth().onAuthStateChanged(function (user) {
+//   console.log(user);
+//   // firebase.auth().currentUser.reload();
+//   if (user) {
+//     var user = firebase.auth().currentUser;
+//     if (user != null && user.emailVerified == true) {
+//       createSessionAndSignIn(user.email);
+//     } else {
+//       sendToast("Email is not verified please verify email");
+//     }
+//   }
+//   // window.user = user; // user is undefined if no user signed in
+// });
 
 const signin = (e) => {
   e.preventDefault();
@@ -67,9 +67,10 @@ var updateStatus = (email) => {
   xhr.send(data);
 };
 
-const createSessionAndSignIn = () => {
+const createSessionAndSignIn = (email) => {
   var data = new FormData();
-  data.append("cust_id", email);
+  data.append("createSessionAndSignIn", "createSessionAndSignIn");
+  data.append("email_id", email);
 
   var xhr = new XMLHttpRequest();
   xhr.open("POST", "main.php", true);

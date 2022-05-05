@@ -1,6 +1,7 @@
 <?php
 
 include './db.php';
+session_start();
 
 ?>
 
@@ -35,33 +36,39 @@ include './db.php';
     $tax = 50;
     $total_amount = 0;
     ?>
-    <table>
-      <tr>
-        <th>Product</th>
-        <th>Quantity</th>
-        <th>Subtotal</th>
-      </tr>
-      <?php
-      $sql = "SELECT *, cart.id AS cart_id, cart.quantity AS cart_quantity, products.quantity AS product_quantity FROM `cart` INNER JOIN products ON product_id=products.id WHERE cust_id=1";
-      $result = $conn->query($sql);
+    <?php
+    if (isset($_SESSION['cust_id'])) {
 
-      if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-          $product_id = $row['product_id'];
-          $cart_id = $row['cart_id'];
-          $product_name = $row['name'];
-          $cust_id = $row['cust_id'];
-          $product_id = $row['product_id'];
-          $price = $row['price'];
-          $discount_price = $row['discount_price'];
-          // $total = $row['total'];
-          $cart_quantity = $row['cart_quantity'];
-          $product_quantity = $row['product_quantity'];
-          $image_url = $row['image_url'];
-          $cart_item_total = $discount_price * $cart_quantity;
+    ?>
+      <table>
 
-          $subtotal += $cart_item_total;
-          echo "
+        <tr>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+        </tr>
+        <?php
+        $cust_id = $_SESSION['cust_id'];
+        $sql = "SELECT *, cart.id AS cart_id, cart.quantity AS cart_quantity, products.quantity AS product_quantity FROM `cart` INNER JOIN products ON product_id=products.id WHERE cust_id=$cust_id";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+          while ($row = $result->fetch_assoc()) {
+            $product_id = $row['product_id'];
+            $cart_id = $row['cart_id'];
+            $product_name = $row['name'];
+            $cust_id = $row['cust_id'];
+            $product_id = $row['product_id'];
+            $price = $row['price'];
+            $discount_price = $row['discount_price'];
+            // $total = $row['total'];
+            $cart_quantity = $row['cart_quantity'];
+            $product_quantity = $row['product_quantity'];
+            $image_url = $row['image_url'];
+            $cart_item_total = $discount_price * $cart_quantity;
+
+            $subtotal += $cart_item_total;
+            echo "
             <tr>
               <td>
                 <div class='cart-info'>
@@ -84,28 +91,33 @@ include './db.php';
               <td>₹$cart_item_total</td>
             </tr>
           ";
+          }
         }
-      }
-      ?>
-    </table>
-
-    <div class="total-price">
-      <table>
-        <tr>
-          <td>Subtotal</td>
-          <td>₹<?= $subtotal ?></td>
-        </tr>
-        <tr>
-          <td>Tax</td>
-          <td>₹<?= $tax ?></td>
-        </tr>
-        <tr>
-          <td>Total</td>
-          <td>₹<?php echo $subtotal + $tax ?></td>
-        </tr>
+        ?>
       </table>
-      <a href="#" class="checkout btn">Proceed To Checkout</a>
-    </div>
+
+      <div class="total-price">
+        <table>
+          <tr>
+            <td>Subtotal</td>
+            <td>₹<?= $subtotal ?></td>
+          </tr>
+          <tr>
+            <td>Tax</td>
+            <td>₹<?= $tax ?></td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td>₹<?php echo $subtotal + $tax ?></td>
+          </tr>
+        </table>
+        <a href="#" class="checkout btn">Proceed To Checkout</a>
+      </div>
+    <?php
+    } else {
+      print_r("Please sign in to see your cart");
+    }
+    ?>
   </div>
   <div id="loading">
     <img id="loading-image" src="https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif" alt="Loading..." />

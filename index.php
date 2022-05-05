@@ -1,5 +1,7 @@
 <?php
 include './db.php';
+session_start();
+$cust_id = $_SESSION['cust_id'];
 ?>
 
 <!DOCTYPE html>
@@ -120,7 +122,7 @@ include './db.php';
               $price = $row['price'];
               $discount_price = $row['discount_price'];
               $image_url = $row['image_url'];
-              $cust_id = 1;
+              // $cust_id = 1;
               echo "
                 <div class='swiper-slide'>
                   <div class='product'>
@@ -186,7 +188,7 @@ include './db.php';
           $price = $row['price'];
           $discount_price = $row['discount_price'];
           $image_url = $row['image_url'];
-          $cust_id = 1;
+          // $cust_id = 1;
 
           echo "
              <div class='product'>
