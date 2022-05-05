@@ -42,10 +42,11 @@ if (isset($_POST['performOnCart'])) {
     $p_id = $_POST['p_id'];
 
     $sql = "SELECT * FROM `cart` WHERE cust_id=$cust_id and product_id=$p_id";
+    // echo $sql;
     $result = $conn->query($sql);
     $count = mysqli_num_rows($result);
     if ($count == 0) {
-        $sql1 = "INSERT INTO `cart` (cust_id, product_id, quantity,total) VALUES ($cust_id, $p_id, 1)";
+        $sql1 = "INSERT INTO `cart` (cust_id, product_id, quantity) VALUES ($cust_id, $p_id, 1)";
         $res1 = $conn->query($sql1);
         if (!$res1) {
             echo "false";

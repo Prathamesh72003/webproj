@@ -14,6 +14,10 @@ const sendToast = (msg) => {
 };
 
 function performOnCart(cust_id, p_id) {
+  if (cust_id == 0) {
+    sendToast("Please sign in or sign up to add to cart");
+    return false;
+  }
   var data = new FormData();
   data.append("performOnCart", "performOnCart");
   data.append("cust_id", cust_id);

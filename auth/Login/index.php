@@ -63,7 +63,7 @@ include '../../db.php';
                         </label>
                     </div> -->
 				<button class="login-btn">Login</button>
-				<h4 style="text-align:center; padding:10px;">New to Niranjan?<a href="/auth/SignUp/" style="text-decoration:underline"> Create account</a></h4>
+				<h4 style="text-align:center; padding:10px;">New to Niranjan?<a href="../SignUp/" style="text-decoration:underline"> Create account</a></h4>
 			</form>
 		</div>
 	</div>

@@ -60,7 +60,7 @@ const signupFun = (e) => {
         sendToast(errmsg);
       });
   } else {
-    sendToast("password and confirm password do not match");
+    sendToast("Password and confirm password do not match");
   }
 };
 
@@ -77,15 +77,13 @@ const storeData = (firstName, lastName, email, password) => {
   xhr.onload = function () {
     // do something to response
     console.log(this.responseText);
-    // if (this.responseText == "true") {
-    //   setTimeout(() => {
-    //     window.location.assign("/webproj/auth/Login");
-    //   }, 3000);
-    // } else {
-    //   sendToast("Something went wrong");
-    // }
+    if (this.responseText == "true") {
+      setTimeout(() => {
+        window.location.assign("/webproj/auth/Login");
+      }, 3000);
+    } else {
+      sendToast("Something went wrong");
+    }
   };
   xhr.send(data);
 };
-
-console.log(storeData());

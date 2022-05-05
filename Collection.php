@@ -59,7 +59,10 @@ $results_per_page = 1;
               $price = $row['price'];
               $discount_price = $row['discount_price'];
               $image_url = $row['image_url'];
-              $cust_id = $_SESSION['cust_id'];
+              $cust_id = 0;
+              if (isset($_SESSION['cust_id'])) {
+                $cust_id = $_SESSION['cust_id'];
+              }
 
               echo "
                 <div class='product'>
