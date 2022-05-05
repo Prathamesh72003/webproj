@@ -46,14 +46,14 @@ include '../../db.php';
 
 				<div class="form-wrapper">
 					<label for="">Email</label>
-					<input type="email" id="email" value="shindesiddhesh13062003@gmail.com" class="form-control" required>
+					<input type="email" id="email" value="" class="form-control" required>
 				</div>
 				<div class="form-wrapper">
 					<div class="form-group">
 						<label for="">Password</label>
 						<!-- <a href="//auth/SignUp/" style="text-decoration:underline">Forgot?</a> -->
 					</div>
-					<input type="password" id="password" value="siddhesh" class="form-control" required>
+					<input type="password" id="password" value="" class="form-control" required>
 				</div>
 
 				<!-- <div class="checkbox">

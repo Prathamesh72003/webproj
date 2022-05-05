@@ -44,6 +44,7 @@ session_start();
         </tr>
         <?php
         $cust_id = $_SESSION['cust_id'];
+        // echo $cust_id;
         $query = mysqli_query($conn, "SELECT *, 
                                       products.id AS product_id,
                                       orders.quantity AS order_quantity 
@@ -55,10 +56,12 @@ session_start();
           $price = $run['amount'];
           $quantity = $run['order_quantity'];
           $status = $run['order_status'];
-          if ($status == 1) {
+          if (strcmp($status,"complete") == 0) {
             $st = "Completed!";
-          } else {
+          } else if(strcmp($status,"pending") == 0){
             $st = "Processing...";
+          }else if(strcmp($status,"shipped") == 0){
+            $st = "Shipped...";
           }
         ?>
           <tr>

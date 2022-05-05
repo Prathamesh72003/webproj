@@ -47,24 +47,24 @@ include '../../db.php';
                 <div class="form-group">
                     <div class="form-wrapper">
                         <label for="">First Name</label>
-                        <input id="firstName" value="fname" type="text" class="form-control" required>
+                        <input id="firstName" value="" type="text" class="form-control" required>
                     </div>
                     <div class="form-wrapper">
                         <label for="">Last Name</label>
-                        <input id="lastName" value="lname" type="text" class="form-control" required>
+                        <input id="lastName" value="" type="text" class="form-control" required>
                     </div>
                 </div>
                 <div class="form-wrapper">
                     <label for="">Email</label>
-                    <input id="email" value="shindesiddhesh13062003@gmail.com" type="text" class="form-control" required>
+                    <input id="email" value="" type="text" class="form-control" required>
                 </div>
                 <div class="form-wrapper">
                     <label for="">Password</label>
-                    <input id="password" value="siddhesh" type="password" class="form-control" required>
+                    <input id="password" value="" type="password" class="form-control" required>
                 </div>
                 <div class="form-wrapper">
                     <label for="">Confirm Password</label>
-                    <input id="cpassword" value="siddhesh" type="password" class="form-control" required>
+                    <input id="cpassword" value="" type="password" class="form-control" required>
                 </div>
                 <div class="checkbox">
                     <label>
