@@ -56,13 +56,6 @@ session_start();
           $price = $run['amount'];
           $quantity = $run['order_quantity'];
           $status = $run['order_status'];
-          if (strcmp($status,"complete") == 0) {
-            $st = "Completed!";
-          } else if(strcmp($status,"pending") == 0){
-            $st = "Processing...";
-          }else if(strcmp($status,"shipped") == 0){
-            $st = "Shipped...";
-          }
         ?>
           <tr>
             <td>
@@ -81,7 +74,7 @@ session_start();
               <h4><?= $quantity ?></h4>
             </td>
             <td>₹ <?= $price ?></td>
-            <td><?= $st ?></td>
+            <td><?= $status ?></td>
           </tr>
 
         <?php
