@@ -112,7 +112,7 @@ session_start();
             <td>₹<?php echo $subtotal + $tax ?></td>
           </tr>
         </table>
-        <a href="../webproj/checkout/checkout.php?cust_id=<?php echo $cust_id?>&total_amt=<?php echo base64_encode($subtotal + $tax)?>" class="checkout btn">Proceed To Checkout</a>
+        <a href="../webproj/checkout/checkout.php?cust_id=<?php echo $cust_id ?>&total_amt=<?php echo base64_encode($subtotal + $tax) ?>" class="checkout btn">Proceed To Checkout</a>
       </div>
     <?php
     } else {

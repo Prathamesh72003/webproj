@@ -58,7 +58,6 @@ if (isset($_SESSION['cust_id'])) {
         </div>
       </div>
     </div>
-
     <!-- Carousel Navigation -->
     <div class="arrows d-flex">
       <div class="swiper-prev d-flex">
@@ -70,9 +69,10 @@ if (isset($_SESSION['cust_id'])) {
     </div>
   </div>
 
+
   <!-- Promotion -->
 
-  <section class="section promotion">
+  <section class=" section promotion">
     <div class="title">
       <h2>Categories</h2>
       <span>Select from the premium product and save plenty money</span>
